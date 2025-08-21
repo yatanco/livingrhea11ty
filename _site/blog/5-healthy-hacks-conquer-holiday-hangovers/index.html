@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>5 Healthy Hacks to Conquer Holiday Hangovers</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="5-healthy-hacks-to-conquer-holiday-hangovers">5 Healthy Hacks to Conquer Holiday Hangovers</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2014-12-10">10 December 2014</time></li>
+	<li><a href="/tags/accountability/" class="post-tag">accountability</a>, </li>
+	<li><a href="/tags/cleanse/" class="post-tag">cleanse</a>, </li>
+	<li><a href="/tags/detox/" class="post-tag">detox</a>, </li>
+	<li><a href="/tags/detoxification/" class="post-tag">detoxification</a>, </li>
+	<li><a href="/tags/energy/" class="post-tag">energy</a>, </li>
+	<li><a href="/tags/health/" class="post-tag">health</a>, </li>
+	<li><a href="/tags/healthhacks/" class="post-tag">healthhacks</a>, </li>
+	<li><a href="/tags/nutrition/" class="post-tag">nutrition</a>, </li>
+	<li><a href="/tags/rejuvenation/" class="post-tag">rejuvenation</a>, </li>
+	<li><a href="/tags/self-care/" class="post-tag">self-care</a>, </li>
+	<li><a href="/tags/wellness/" class="post-tag">wellness</a></li>
+</ul>
+
+<p>This article was published in the Huffington Post. You can read it <a href="http://www.huffingtonpost.com/dr-rhea-mehta/5-health-hacks-to-conquer_1_b_6280972.html">here</a>, or continue reading below.</p>
+<p>~</p>
+<p>Whether or not you're a health nut, it's challenging to stay on your game over the holidays, especially if you're doing family dinners and party hopping. The influx of toxins from food and alcohol make it tough to fully immerse yourself in the intended joy of the season.</p>
+<p><em>How can we participate in unbridled celebration at parties and gatherings while avoiding the consequences of all that merry consumption?</em></p>
+<p>In this case, we're looking for a quick fix. That thing we can do or take before, during or after our binge fest to clear our systems. That thing we can do to give us the energy to be mind-body ready for the next festivity.</p>
+<p>I suggest the following healthy hacks:</p>
+<p><strong>Water</strong></p>
+<p>This one sounds simple, but drinking water isn't often front of mind in social situations. My suggestion is to drink a tall glass of water before heading out the door and again in between alcoholic drinks. This helps prevent dehydration and the ensuing constipation, fatigue and sore throat. If you can pull it off, bringing a water bottle with you is a great option to ensure hydration. Even if you store it in your bag or boot, and only notice it on the way out. It's a great way to remind yourself to rehydrate at the end of the night. Coconut water is an added bonus, as it contains minerals like <a href="http://www.mdpi.com/1420-3049/14/12/5144">potassium</a> to replenish your stores after a night of drinking, especially [1]. To further boost your electrolytes, consider adding sea salt to your coconut water, or to a glass of water the following morning [2].</p>
+<p><strong>Breath</strong></p>
+<p>We all know how to breathe, yes. But how many of us are actually intentional about our breathing? Most of us shallow breathe, until we're reminded of that thing called breath. And then more often than not, we'll follow with one or two deep breaths, and quickly realize how good we feel, almost instantly. This practice of bringing your attention to your breath can be very helpful in both social and stressful situations. It's calming, grounding, and if we're about to eat a meal, it can make for a more fulfilling digestion [3]. As a bonus, focusing on your breath can also positively impact your food and drink choices, thereby minimizing your cravings. To help you remember, you can place a sticky note on your smartphone with a personal note, or you can set a vibrating alarm on your device with a breathing reminder attached. Or if you really want to take it the next level, you can be that person who brings up the <em>&quot;are you breathing&quot;</em> conversation at your social gathering, to keep your friends aligned.</p>
+<p><strong>Digestive Enzymes</strong></p>
+<p>If you don't properly break down the food you eat, your body can't make sense of it. The bacteria in your gut end up taking over and having a party with it instead. The result: discomfort, <a href="http://www.ncbi.nlm.nih.gov/pubmed?term=Psycholgin%20D%255BAuthor%255D&amp;cauthor=true&amp;cauthor_uid=2929557">gas</a>, bloating, and in some cases, inflammation and low energy [4, 5]. Poor breakdown of food is common in social settings, when you're trying to get through the food in your mouth quickly, so you can get back to talking. If we don't chew our food enough, we fail to send the right signals to our body to release enzymes that help break it down. Of course the quickest fix is simply to chew your food better! But in case you didn't, you can give your system a lift by taking digestive enzymes in pill form [6]. They're no substitute for chewing, but they can help breakdown larger pieces of food into morsels the body can use for nutrition and energy. Take them as directed.</p>
+<p><strong>Fiber</strong></p>
+<p>You're at a party and all of a sudden you're surrounded by sweets. What should you do? Reach for some fiber. Fiber-containing foods are plant-based foods in their most unprocessed form, like nuts, seeds, whole grains, fruits and vegetables. They'll keep you from getting spikes in blood sugar, by making sure your digestion is slow and steady. They'll also keep your excretory pathways moving well, thereby preventing constipation. If you're at a party, look for some fruit or seeds to eat alongside your sugary treat. When you're back at home, have a fiber supplement before bed, to make sure you wake up with happy bowels [7, 8]. Soaked chia seeds are my go to source for fiber, but there are several to choose from. Find one that works for you, and make it your best friend.</p>
+<p><strong>Antioxidants</strong></p>
+<p>Whether you choose it or not, if you're social, it's likely you'll be around alcohol. Given the high volume of parties over the holidays, you'll want to come up with a strategy to avoid hurting your liver, even in the slightest. Why? It's the ultimate detoxification system in the body, and when it's stressed or <a href="http://pubs.niaaa.nih.gov/publications/arh27-3/220-231.htm">overloaded</a>, it doesn't work as well [9, 10]. The liver relies on the activity of vitamins and minerals to help it with detoxification. One in particular is glutathione, a powerful antioxidant and chaperone to toxins, on their way out of the body. Glutathione stores get depleted as we age, and especially with the influx of toxins, like alcohol [11]. So, one way to circumvent this is to take antioxidants that are responsible for reducing alcohol toxicity, or toxicity in general, before and during your social outing. These include N-acetyl cysteine (NAC), <a href="http://alcalc.oxfordjournals.org/content/29/5/513.short">vitamin B complex</a>, vitamin C and vitamin E [12, 13]. Take them as directed.</p>
+<p>Besides supporting you in the short-term, these health hacks can also be applied daily, to maintain long-lasting health. Give these a try over the holidays, and if you feel great, why not challenge yourself to include these as part of your new year's wellness plan?</p>
+<p></p>
+<p>Happy Holidays!</p>
+<p></p>
+<p><em>References:</em></p>
+<p><em>1. Yong Jean WH, Ge L, Ng FY, Tan SN, The chemical composition and biological properties of coconut (Cocos nucifera L.) water, Molecules, 2008, 14(12): 5144-5164. doi:10.3390/molecules14125144.</em></p>
+<p><em>2. Ismail l, Singh R, Sirisinghe RG, Rehydration with sodium-enriched coconut water after exercise-induced dehydration, Southeast Asian J Trop Med Public Health, 2007, 38(4): 769-85.</em></p>
+<p><em>3. Oral digestion of a complex-carbohydrate cereal: effects of stress and relaxation on physiological and salivary measures, Am J Clin Nutr,1989, 49: 97-105.</em></p>
+<p><em>4. Fooks LJ, Fuller R, Gibson GR, Prebiotics, probiotics and human gut microbiology, International Dairy Journal, 1999, 9(1): 53-61.</em></p>
+<p><em>5. Haderstorfer B, Psycholgin D, Whitehead WE, Schuster MM, Intestinal gas production from bacterial fermentation of undigested carbohydrate in irritable bowel syndrome, Am J Gastroenterol, 1989, 84(4): 375-8.</em></p>
+<p><em>6. Roxas M, The role of enzyme supplementation in digestive disorders, Altern Med Rev, 2008,13(4): 307-14.</em></p>
+<p><em>7. Yang J, Wang HP, Zhou L, Xu CF, Effect of dietary fiber on constipation: a meta analysis, World J Gastroenterol, 2012, 28,18(48): 7378-83. doi: 10.3748/wjg.v18.i48.7378.</em></p>
+<p><em>8. Murakami K, Sasaki S, Okubo H, Takahashi Y, Hosoi Y, Itabashi M; Freshmen in Dietetic Courses Study II Group, Association between dietary fiber, water and magnesium intake and functional constipation among young Japanese women, Eur J Clin Nutr, 2007, 61(5): 616-22.</em></p>
+<p><em>9. Das SK1, Vasudevan DM, Alcohol-induced oxidative stress, Life Sci, 2007, 81(3): 177-87.</em></p>
+<p><em>10. Lieber, CS, Relationships Between Nutrition, Alcohol Use, and Liver Disease, National Institute on Alcohol Abuse and Alcoholism, Department of Veterans Affairs and Kingsbridge Research Foundation.</em></p>
+<p><em>11. Ronis MJ, Butura A, Sampey BP, Shankar K, Prior RL, Korourian S, Albano E, Ingelman-Sundberg M, Petersen DR, Badger TM, Effects of N-acetylcysteine on ethanol-induced hepatotoxicity in rats fed via total enteral nutrition, Free Radic Biol Med, 2005, 39(5): 619-30.</em></p>
+<p><em>12. Lee SJ, Kim SY, Min H, Effects of vitamin C and E supplementation on oxidative stress and liver toxicity in rats fed a low-fat ethanol diet, Nutr Res Pract, 2013, 7(2): 109-14. doi: 10.4162/nrp.2013.7.2.109.</em></p>
+<p><em>13. Vidhya A, Renjugopal V, Indira M, Impact of thiamine supplementation in the reversal of ethanol induced toxicity in rats, Indian J Physiol Pharmacol, 2013, 57(4): 406-17.</em></p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/health-and-wellness-coach/">Why I Choose to be a Coach</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/healthy-green-smoothie-recipe/">Follow These Steps to Make the Perfect Green Smoothie</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/blog/5-healthy-hacks-conquer-holiday-hangovers/` was built on 2025-08-21T12:10:44.457Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

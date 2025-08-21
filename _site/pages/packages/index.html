@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Packages</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<p><strong>Clean Sweep</strong></p>
+<p>A 3-month comprehensive program to help you clean sweep your health and lifestyle. This program consists of one-hour coaching sessions every 2 weeks via skype or in person for a total of 6 sessions.</p>
+<p>This program includes an assessment of your Health History and Metabolic Typing, followed by your Clean Sweep Action Plan, which includes:</p>
+<ul>
+<li>Education on mind-body optimization</li>
+<li>Identification of toxic triggers and removal/release</li>
+<li>Clean Sweep Shopping List</li>
+<li>Clean Sweep Meal Plan with customized recipes, supplements and self-care accessories, where appropriate</li>
+<li>Changemaker Tracker to pinpoint symptomatic patterns and monitor your daily progress</li>
+<li>Summary, notes and recommendations after each session</li>
+<li>Unlimited email support</li>
+</ul>
+<p>Investment:</p>
+<ul>
+<li>$500/month; or</li>
+<li>Upfront payment of $1350</li>
+</ul>
+<p>In this program, I will work with you to raise your health and lifestyle to a level that's aligned with your greater purpose. I’ll help you understand your specific nutritional needs, and I’ll guide you on how to deliver optimal value to your mind and body, while recognizing and overcoming habits that aren’t serving you. My signature program will enable you to move forward in life, feeling cleaner, lighter, happier, more motivated, energized, and purpose-driven.</p>
+<p>As we go deeper into our sessions, we’ll go deeper into your life. We’ll talk work, relationships, creativity, purpose, physical health and happiness, and we’ll draw connections to your health and healing. At the end of our program, we will re-assess your goals and health status and decide whether to continue to work together on a bimonthly basis. We may also switch to a maintenance program, whereby we connect only once a month. This is decided on a client-by-client basis, depending on your needs.</p>
+<p></p>
+<p><strong>Cleanse to Clarity</strong></p>
+<p>A 6-month comprehensive program which includes the 3-month Clean Sweep Program as above plus an extra 3 months that can be used anytime in the same year.</p>
+<p>This program involves all of the above, and provides 6 additional one-hour coaching sessions to ensure new habits and rituals become integrated and applied on a regular basis. It also allows for additional education, support, deeper analysis and follow through on longer term goals.</p>
+<p>Investment:</p>
+<ul>
+<li>Upfront payment of $1500 plus $1000 after 3 months: Total $2500</li>
+</ul>
+<p></p>
+<p><strong>Maintenance</strong></p>
+<p>1 one-hour coaching session per month</p>
+<p>This program is offered to existing clients who would like to continue beyond the  Clean Sweep or Cleanse to Clarity Programs with additional coaching on a flexible schedule.</p>
+<p>Investment:</p>
+<ul>
+<li>$250/month</li>
+</ul>
+<p></p>
+<p><strong>Power Hour</strong></p>
+<p>A 1-on-1 call with me to discuss anything you would like to know or learn more about in the context of health and nutrition.</p>
+<p>You:</p>
+<ul>
+<li>Can schedule our Power Hour by emailing info@livingrhea.com with the subject POWER HOUR</li>
+<li>May email your questions or situation in advance, or complete the form below (if relevant) and include your questions</li>
+<li>May record our call</li>
+<li>Should do whatever it takes for you to get the most from our time together</li>
+</ul>
+<p>Investment:</p>
+<ul>
+<li>1 hour $250</li>
+</ul>
+<p></p>
+<p><strong>Power Month</strong></p>
+<p>A 1 month custom protocol to help you clean sweep and upgrade your health and lifestyle. This program consists of 2 one-hour educational and interactive sessions via skype or in person, along with customized recipes, a shopping list, meal plan and shopping cart (as needed).   For this custom protocol, you are free to choose how you would like to make use of your 2 one-hour sessions. Examples include education and Q&amp;A, personal shopping, in-home or video-based recipe demonstrations or kitchen (pantry and fridge) clean sweep to remove trigger foods.</p>
+<p>This program includes an assessment of your Health History and Metabolic Typing, followed by your Custom Protocol, which includes:</p>
+<ul>
+<li>2 hours of custom guidance (see examples above)</li>
+<li>Clean Sweep Shopping List</li>
+<li>Clean Sweep Meal Plan with customized recipes, supplements and self-care accessories, where appropriate</li>
+<li>Email support for the month</li>
+</ul>
+<p>Investment:</p>
+<ul>
+<li>$500</li>
+</ul>
+<p></p>
+<p><strong>Deep Dive</strong></p>
+<p>½ day or 1 day Program</p>
+<p>In this intensive program, we’ll dive deep, covering much of what you would learn over the course of a multi-month program. This package includes hands-on guidance, including home audit (kitchen, bathroom, laundry), personal shopping, creative visualization, education and recipe demonstrations. There will be a large focus on education and health strategy, so we ensure you walk away feeling replete in know-how, and motivated to create long-term shifts in your diet and lifestyle.</p>
+<p>This program is best designed for those who are comfortable absorbing and digesting large amounts of information in one sitting, without feeling overwhelmed.</p>
+<p>What’s included:</p>
+<ul>
+<li>2 months of unlimited follow up email support</li>
+<li>Summary, notes and recommendations</li>
+<li>Clean Sweep Shopping List</li>
+<li>Clean Sweep Meal plan with customized recipes, supplements and self-care accessories, where appropriate</li>
+</ul>
+<p>Investment:</p>
+<ul>
+<li>½ day $850</li>
+<li>1 day $1500</li>
+</ul>
+<p></p>
+<p>I also offer multi-day Intensive Coaching, or what I refer to as an <strong>In-House Coaching</strong> <strong>Program</strong>. This method of coaching has proven successful for my clients who run businesses and/or lead very busy lives. To determine the most appropriate short-term and long-term health strategies and hacks for my clients, I shadow their daily home and work activities for a set number of days. If this is an area of interest, please contact me directly.</p>
+<p></p>
+<p>For all inquiries, please email info@livingrhea.com with the subject COACHING SERVICES. From there I'll invite you to book a free 15 minute consult to discuss.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/packages/` was built on 2025-08-21T12:10:44.454Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

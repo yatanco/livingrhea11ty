@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home - New Slider</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<p><a href="https://www.livingrhea.com/music/">JOIN ME ON MY HEALING JOURNEYMy debut EP &quot;Soul Ceremony&quot; launched worldwide o nJanuary 21, 2022. Have a listen and watch my music video for &quot;bright Light&quot; based on the 4000 year old Gayatri mantra.Listen now</a><a href="https://www.livingrhea.com/coaching/">Clean Living Styled for You.Infuse your life with plant-based nutrition and health education. I work with clients near and far to optimize habits, redesign diets, and accomplish goals. Let's build your personalized protocol.Work with me</a><a href="https://www.livingrhea.com/globalsmoothieday/">Did someone say #GlobalSmoothieDay ?Our solution to the climate crisis is a simple and organic vegan smoothie. Learn about our inclusive movement and how you can help us spread the smoothie sentiment.Smoothie time!</a> Previous slide Next slide</p>
+<iframe style="width: 100%" title="Youtube Video" id="presto-iframe-fallback-1" data-src="https://www.youtube.com/embed/w7WLipkXmWQ?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen="" allowtransparency="" allow="autoplay"></iframe>
+<h3 id="about-dr-rhea-mehta">About Dr. Rhea Mehta</h3>
+<p><strong>DR. RHEA MEHTA IS AN INNOVATIVE SOCIAL ENTREPRENEUR AND ADVISOR AT THE INTERSECTION OF SCIENCE, HEALTH TECHNOLOGY, AND WELLNESS.</strong></p>
+<h3 id="rhea-holds-a-phd-in-molecular-toxicology-and-nutritional-biochemistry-from-the-university-of-toronto-and-a-bachelor-s-in-biomedical-sciences-from-the-university-of-waterloo-with-over-15-scientific-publications">Rhea holds a PhD in Molecular Toxicology and Nutritional Biochemistry from the University of Toronto and a Bachelor’s in Biomedical Sciences from the University of Waterloo with over 15 scientific publications.</h3>
+<p>She’s the founder of Living Rhea, a scientific wellness consultancy with services including 1-on-1 health coaching (Institute for Integrative Nutrition), scientific communications (writing, research, talks, interviews), and strategic advisory.</p>
+<p><a href="https://www.livingrhea.com/about/">Learn More</a></p>
+<h4 id="coaching">Coaching</h4>
+<p><strong>Personal development for a lifetime of healthy and rewarding habits.</strong></p>
+<p>As human beings we are designed to self-heal. However, over the years we both knowingly and unknowingly introduce fat-soluble toxicants in the form of pollutants, heavy metals, pesticides, processed foods, and solvents to our bodies. When our load rises above our ability to cleanse the system naturally, toxicants get stored, instead of released. The consequences of environmental toxicity, paired with poor nutrition from our diet and from the soil that grows our food, is a recipe for several of the chronic symptoms we experience today, such as brain fog, headaches, low energy, poor digestion, constipation, and body pain. If we don’t correct this, the build up can eventually disrupt our internal environment, leading to disease. The good news is there’s a lot we can do right now. <a href="https://www.livingrhea.com/coaching/">Learn More</a>  <picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhome-banner-2.jpg&width=1920&format=avif&via=transform 1920w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhome-banner-2.jpg&width=1920&format=webp&via=transform 1920w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhome-banner-2.jpg&width=1920&format=jpeg&via=transform" alt="Clean Living" width="1920" height="1281"></picture></p>
+<h3 id="rhea-has-the-drive-of-an-entrepreneur-the-mind-of-a-scientist-and-the-heart-of-a-healer-she-has-a-focused-vision-and-an-impressive-speed-of-execution-this-is-due-in-part-to-her-unwavering-commitment-her-natural-ability-as-a-community-builder-and-leader-and-the-rigour-she-brings-to-the-products-ideas-and-services-she-creates-she-makes-an-excellent-collaborator-and-we-are-just-witnessing-the-start-of-her-success-big-things-to-come">“Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.”</h3>
+<h4 id="global-smoothie-day-community-events">Global Smoothie Day Community Events</h4>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-10-e1691423372413.jpg"></a><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-india.jpg"></a><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-8-e1691423312419.jpg"></a><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-5.jpg"></a><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-4.jpg"></a><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-croatia.jpg"></a><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-2.jpg"></a><a href="https://www.livingrhea.com/globalsmoothieday/">show more</a></p>
+<h4 id="featured-videos">Featured Videos</h4>
+<iframe style="width: 100%" title="Youtube Video" id="presto-iframe-fallback-2" data-src="https://www.youtube.com/embed/injjrFugT9Y?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen="" allowtransparency="" allow="autoplay"></iframe>
+<iframe style="width: 100%" title="Youtube Video" id="presto-iframe-fallback-3" data-src="https://www.youtube.com/embed/unWa3A6urZc?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen="" allowtransparency="" allow="autoplay"></iframe>
+<iframe style="width: 100%" title="Youtube Video" id="presto-iframe-fallback-4" data-src="https://www.youtube.com/embed/w7WLipkXmWQ?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen="" allowtransparency="" allow="autoplay"></iframe>
+<h4 id="what-clients-say">What Client's Say​</h4>
+<blockquote>
+<p>Dr. Rhea is unbelievably informed and conveys her message with pure love. True love of people, love of food, love of radiant health and love of knowledge. She is a joyful leader and a true healer.</p>
+</blockquote>
+<p>Erin DiedlingMEd, LCPC, Director of Trauma and Eating Disorders Treatment, The Awakening Center Chicago Thanks to Dr. Rhea’s counsel, every day I make sure to consume super foods and I’m also choosing food that is kind to my digestive system. I also undertook a juice cleanse with her that left me feeling vibrant and rejuvenated. I also learned that my intention transforms how my body receives and processes the nutrients from my food. Dr. Rhea is incredibly knowledgeable about the functioning of the human body. I feel empowered from the counsel she has given me and would highly recommend her to others seeking to transform their relationship with food. Justin BrownCo-Founder &amp; CEO, Ideapod Working with Rhea has expanded and pushed both my mind and body. Over the past months, she has taught me a tremendous amount about myself and how we, as a society, relate to food. Rhea has shown me how I can easily embrace whole foods, sports, and mindfulness into my academic life — predisposed to reading, writing, a whole lot of sitting. Ultimately, though, Rhea’s light and warmth transcends her expertise in the nutritional domain into all of her relationships. It is for this reason that I am forever grateful for both her friendship and support — thank you, thank you, thank you. Tahnee PriorPhD Candidate &amp; Researcher; Balsillie School of International Affairs There is something a little bit magical about Rhea Mehta. Maybe it’s all the superfoods she eats. She radiates good health and is a fountainhead of wisdom about all aspects of deep nutrition and even deeper living. Prepare to be supercharged. Jeff WarrenWriter and Meditation Instructor Rhea’s passion is infectious. Her intrepid pursuit of her passion has inspired me to follow mine; and I’ll always be grateful to her for her limitless generosity. Rahul SarugaserFounder, Bespoke Craft Foods Rhea is a bounce of genius, a wealth of knowledge and a beacon of success. What ever the Mantra you profess, I truly believe she makes a real, wonderful and powerful impact. Alive food has a beautiful advocate, her name is Rhea. Myron LuisLoving and living Rhea since 2011 Rhea offers a graceful combination of practical day-to-day logistical advice mixed with big-picture visioning. Working with her has triggered deep personal growth for me in terms of my diet, stress reduction, and even how I approach the world and my relationships. She is a patient and conscious listener and fantastic at answering the hard questions while helping you incorporate practices into your everyday life to stay. It is clear to me that what I’m learning with Rhea’s help will become cemented as habits and “ways of being” that will making a lasting impact on my well being. I’m extremely thankful to have stumbled into the opportunity to work with Rhea. It’s pretty rare to get to work with someone who has such in depth medical and scientific training (both in Eastern and Western philosophies), who also has so much to offer in the realm of mindfulness, intention-setting, and overall living more joyfully! Jess R.Social Entrepreneur and Visiting Scholar, Stanford University Global Projects Center Rhea is like a walking breath of fresh air! She is poised, highly intelligent, and most of all she understands what it truly takes to lead a beautifully balanced life. I have had the privilege of working with Rhea in an intimate setting; she not only inspires me daily with her go-getter fire, but her natural ability to bring community and awareness to those seeking greater opportunities in their lives through holistic practices is phenomenal. Thank you Rhea for all that you bring to this planet; you truly are GOLD. Angel QuintanaFounder of Holistic Fashionista and Podcast Host Previous Next <a href="https://www.livingrhea.com/testimonials/">Show All testimonials</a></p>
+<h4 id="what-clients-say-2">What Client's Say​</h4>
+<p>Erin DiedlingMEd, LCPC, Director of Trauma and Eating Disorders Treatment, The Awakening Center Chicago Read More</p>
+<blockquote>
+<p>Dr. Rhea is unbelievably informed and conveys her message with pure love. True love of people, love of food, love of radiant health and love of knowledge. She is a joyful leader and a true healer.</p>
+</blockquote>
+<p>Justin BrownCo-Founder &amp; CEO, Ideapod Read More Thanks to Dr. Rhea’s counsel, every day I make sure to consume super foods and I’m also choosing food that is kind to my digestive system. I also undertook a juice cleanse with her that left me feeling vibrant and [expander_maker id=&quot;2&quot; more=&quot;Read more&quot; less=&quot;Read less&quot;]rejuvenated. I also learned that my intention transforms how my body receives and processes the nutrients from my food. Dr. Rhea is incredibly knowledgeable about the functioning of the human body. I feel empowered from the counsel she has given me and would highly recommend her to others seeking to transform their relationship with food.[/expander_maker] Tahnee PriorPhD Candidate &amp; Researcher; Balsillie School of International Affairs Read More Working with Rhea has expanded and pushed both my mind and body. Over the past months, she has taught me a tremendous amount about myself and how we, as a society, relate to food. Rhea has shown me how I can[expander_maker id=&quot;2&quot; more=&quot;Read more&quot; less=&quot;Read less&quot;] easily embrace whole foods, sports, and mindfulness into my academic life — predisposed to reading, writing, a whole lot of sitting. Ultimately, though, Rhea’s light and warmth transcends her expertise in the nutritional domain into all of her relationships. It is for this reason that I am forever grateful for both her friendship and support — thank you, thank you, thank you.[/expander_maker] Jeff WarrenWriter and Meditation Instructor Read More There is something a little bit magical about Rhea Mehta. Maybe it’s all the superfoods she eats. She radiates good health and is a fountainhead of wisdom about all aspects of deep nutrition and even deeper[expander_maker id=&quot;2&quot; more=&quot;Read more&quot; less=&quot;Read less&quot;] living. Prepare to be supercharged.[/expander_maker] Rahul SarugaserFounder, Bespoke Craft Foods Read More Rhea’s passion is infectious. Her intrepid pursuit of her passion has inspired me to follow mine; and I’ll always be grateful to her for her limitless generosity. Myron LuisLoving and living Rhea since 2011 Read More Rhea is a bounce of genius, a wealth of knowledge and a beacon of success. What ever the Mantra you profess, I truly believe she makes a real, wonderful and powerful impact. Alive food has a beautiful[expander_maker id=&quot;2&quot; more=&quot;Read more&quot; less=&quot;Read less&quot;] advocate, her name is Rhea.[/expander_maker] Jess R.Social Entrepreneur and Visiting Scholar, Stanford University Global Projects Center Read More Rhea offers a graceful combination of practical day-to-day logistical advice mixed with big-picture visioning. Working with her has triggered deep personal growth for me in terms of my diet, stress reduction, and even[expander_maker id=&quot;2&quot; more=&quot;Read more&quot; less=&quot;Read less&quot;] how I approach the world and my relationships. She is a patient and conscious listener and fantastic at answering the hard questions while helping you incorporate practices into your everyday life to stay. It is clear to me that what I’m learning with Rhea’s help will become cemented as habits and “ways of being” that will making a lasting impact on my well being. I’m extremely thankful to have stumbled into the opportunity to work with Rhea. It’s pretty rare to get to work with someone who has such in depth medical and scientific training (both in Eastern and Western philosophies), who also has so much to offer in the realm of mindfulness, intention-setting, and overall living more joyfully![/expander_maker] Angel QuintanaFounder of Holistic Fashionista and Podcast Host Read More Rhea is like a walking breath of fresh air! She is poised, highly intelligent, and most of all she understands what it truly takes to lead a beautifully balanced life. I have had the privilege of working with Rhea in an[expander_maker id=&quot;2&quot; more=&quot;Read more&quot; less=&quot;Read less&quot;] intimate setting; she not only inspires me daily with her go-getter fire, but her natural ability to bring community and awareness to those seeking greater opportunities in their lives through holistic practices is phenomenal. Thank you Rhea for all that you bring to this planet; you truly are GOLD.[/expander_maker] Previous Next <a href="https://www.livingrhea.com/testimonials/">Show All testimonials</a></p>
+<h4 id="recent-blogs">Recent Blogs</h4>
+<p><a href="https://www.livingrhea.com/blog/">Show all blogs</a></p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/home-duplicate-8659/` was built on 2025-08-21T12:10:44.453Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

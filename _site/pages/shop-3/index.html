@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Shop</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<p>[vc_row row_scroll_icon=&quot;no&quot;][vc_column][eltd_section_title title=&quot;Recommendations By Rhea&quot; title_color=&quot;#5dba9f&quot; title_text_transform=&quot;uppercase&quot; title_text_align=&quot;center&quot; margin_bottom=&quot;&quot; title_size=&quot;&quot;][vc_empty_space][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Navitas Naturals Organic Cacao Powder</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;4918&quot; img_size=&quot;full&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2gpULL4&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Sunwarrior Plant-Based Protein Powder</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;4917&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2gpYBUr&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>doTERRA PastTense Essential Oil Tension</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;4916&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2hjihqh&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Organifi Green Juice Powder</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;4915&quot; img_size=&quot;full&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://organifishop.com?rfsn=213837.5c1df&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Cordyceps Superfood Mushroom Drink Mix</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;4914&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2gmNUgH&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Wild Remedies Premium Chaga Tea</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5133&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2kh7AsI&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Nutiva Organic Coconut Manna (Coconut Butter)</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5136&quot; img_size=&quot;full&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2j1TOoT&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Antioxidant Superfruit Smoothie Mix</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5137&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2kfHsKC&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Fruit &amp; Vegetable Spiralizer</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5142&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2jFGk48&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Manitoba Harvest Organic Hemp Seeds</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5144&quot; img_size=&quot;full&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2j1WrH6&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Camu Camu Berry Vitamin C Smoothie Powder</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5145&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2jFTk9y&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Excalibur 5-Tray Dehydrator</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5146&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2jdtewe&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Beekeeper's Naturals Throat Relief Propolis Spray</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5149&quot; img_size=&quot;full&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2jJrGsA&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>Nature's Aid Skin Gel</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5150&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2jQPHzN&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_column_text]</p>
+<p><strong>BroccoFusion Sulforaphane Lotion</strong></p>
+<p><strong>(multi purpose DNA repair lotion)</strong></p>
+<p>[/vc_column_text][vc_empty_space][vc_single_image image=&quot;5155&quot; img_size=&quot;large&quot; alignment=&quot;center&quot; onclick=&quot;custom_link&quot; img_link_target=&quot;_blank&quot; css_animation=&quot;fadeInDown&quot; link=&quot;http://amzn.to/2j5GZJX&quot;][/vc_column][/vc_row]</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/shop-3/` was built on 2025-08-21T12:10:44.454Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

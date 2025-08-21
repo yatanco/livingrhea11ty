@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/" aria-current="page">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<p>ABOUT</p>
+<h2 id="my-bio">MY BIO</h2>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FRhea-Mehta-Bio.jpg&width=600&format=avif&via=transform 600w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FRhea-Mehta-Bio.jpg&width=600&format=webp&via=transform 600w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FRhea-Mehta-Bio.jpg&width=600&format=jpeg&via=transform" alt="" width="600" height="900"></picture></p>
+<p>Dr. Rhea Mehta has over 10 years experience working as an innovative entrepreneur and advisor at the intersection of science, health technology, and wellness. She holds a PhD in Molecular Toxicology and Nutritional Biochemistry from the University of Toronto and a Bachelor's in Biomedical Sciences from the University of Waterloo with over 15 scientific publications.</p>
+<p>Rhea Mehta is the founder of Living Rhea, a scientific wellness consultancy with services including 1-on-1 health coaching (Institute for Integrative Nutrition), scientific communications (writing, research, talks, interviews), and strategic advisory. She is the co-founder of Bowhead Health, a cutting-edge Canadian company leveraging blockchain and smart contract technology to help individuals safely track, own and manage their health and wellness data.</p>
+<p>Rhea's the founder of Global Smoothie Day, an inclusive wellness movement aimed at making the adoption of a nutritious, plant-based smoothie lifestyle feel achievable and exciting. She also co-founded Reset, a non-profit organization that creates tech-free immersive experiences and 4-day summer camps for adults to help them feel like kids again.</p>
+<p>Rhea Mehta is a featured member of the Mind Body Green Collective of global health and wellness experts, owing to her years writing for the platform and contributing as a thought leader in environmental toxicity. She practices and teaches breathwork and kriya-kundalini yoga from the ancient Himalayan Vedantic Tradition (200 hr, Sattva Yoga Academy, India) and is also trained in sound ceremony (100 hr, Yoga Forest, Guatemala).</p>
+<p>See Portfolio Below</p>
+<h2 id="featured-past-work">FEATURED PAST WORK</h2>
+<h4 id="scientific-research-articles-and-publications">Scientific research, articles and publications:</h4>
+<ul>
+<li><a href="https://drive.google.com/file/d/106Q8XuNINoXPbrFdfaxn_I7us0lKU4PL/view?usp=sharing">Scientific compendium on medicinal mushrooms</a>  written for  <a href="https://qitraditions.com/">Qi Traditions</a></li>
+<li><a href="https://tspace.library.utoronto.ca/bitstream/1807/31865/6/Mehta_Rhea_201111_PhD_thesis.pdf">Doctoral thesis</a>  on investigating the cytoprotective mechanisms of vitamins B6 and B1 against endogenous-toxin induced oxidative stress</li>
+<li>Research article on  <a href="https://qitraditions.com/blogs/news/ganoderma-reishi-mushroom-of-immortality">reishi mushrooms</a>  for Qi Traditions</li>
+<li>Research article on  <a href="https://qitraditions.com/blogs/news/lion-s-mane-a-multi-modal-medicinal-fungus">lion's mane</a>  mushrooms for Qi Traditions</li>
+<li><a href="https://www.mindbodygreen.com/0-26878/this-is-the-only-smoothie-youll-ever-need-to-beat-burnout.html">This is the only smoothie you'll ever need to beat burnout</a>  for MindBodyGreen</li>
+<li><a href="https://www.mindbodygreen.com/wc/dr-rhea-mehta">See all articles</a>  written for MindBodyGreen</li>
+</ul>
+<h4 id="talks">Talks</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=w7WLipkXmWQ">Blockchain meets healthcare</a>  at HealthTO, Toronto</li>
+<li><a href="https://www.youtube.com/watch?v=injjrFugT9Y">My formula for optimal living</a>  at Do Lectures, Costa Rica</li>
+</ul>
+<h4 id="podcast-interviews">Podcast Interviews:</h4>
+<p><strong>Scientific wellness and community initiatives:</strong></p>
+<ul>
+<li><a href="https://podcasts.apple.com/us/podcast/how-to-rid-your-home-of-toxins-with-rhea-mehta-ph-d/id1246494475?i=1000442642624?i=1000442642624">How to rid your home of toxins</a>  on the MindBodyGreen Podcast</li>
+<li><a href="https://entrepologypodcast.libsyn.com/006-integrity-and-self-love-with-dr-rhea-mehta">Community, play and entrepreneurism</a>  on the Entreprenology Podcast</li>
+<li><a href="https://www.youtube.com/watch?v=GjCoZ357RsM">How to start a social movement</a>  on the Inner Changemaker Podcast.</li>
+</ul>
+<p><strong>Digital Health and Blockchain:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=i_cEkE-M7ig">How to hack the healthcare system</a>  on the DNX Podcast</li>
+<li><a href="https://www.shapescale.com/blog/20-minute-fitness-podcast/why-dr-rhea-mehta-built-bowhead-health/">why dr Rhea Mehta built an encrypted wellness platform</a>  on the 20 Minute Fitness Podcast</li>
+<li><a href="https://blockchainhealthcarereview.com/around-the-block-with-wellness-tracking-feature-interview-with-dr-rhea-mehta-bowhead-health/">Around the block with wellness tracking</a>  by Blockchain Healthcare Review</li>
+</ul>
+<h4 id="written-interviews">Written Interviews:</h4>
+<ul>
+<li><a href="https://www.mindbodygreen.com/articles/a-toxicologists-healthy-travel-tips-that-help-her-avoid-germs">5 ways a toxicologist avoids germs when she travels</a></li>
+<li><a href="https://www.mindbodygreen.com/articles/how-to-winterproof-your-home-according-to-a-toxicologist">A toxicologist's 7 step guide to winter-proofing your home</a></li>
+<li><a href="https://www.mindbodygreen.com/articles/the-most-important-places-to-clean-at-home">A toxicologist explains how often you need to be cleaning your home</a></li>
+<li><a href="https://www.mindbodygreen.com/articles/should-you-clean-your-mattress-how-to-and-how-often">A toxicologist explains how you need to be cleaning your mattress</a></li>
+<li><a href="https://www.integrativenutrition.com/blog/2015/02/scientist-health-coach-dr-rhea-mehta-on-science-and-inspiration">On Science and inspiration</a>  with Institute for Integrative Nutrition</li>
+</ul>
+<h2 id="my-story">MY STORY</h2>
+<p>Growing up in a very small, remote French Canadian town in Northern Ontario, Canada as an immigrant family from East Africa and India wasn’t the easiest when it came to our native vegetarian cuisine. Food staples had to be purchased well in advance from the big city (Toronto!) and stored for months in our pantry. Fresh produce was available, but lacked in diversity. We were the only vegetarian family in town, and I was very often teased for that.</p>
+<p>At a young age, I began complaining to my parents about having a “sore tummy”. My stomach often felt weak and bloated, and I was experiencing frequent bouts of gut irritability and abdominal pain. Fast-forward to my early teens. With stomach pain still affecting me, I began complaining about lower back pain. Soon after, I experienced my very first of several chronic back spasms at 15 years old. I was sore, and by this time, I had limited mobility.</p>
+<p>These spasms, followed by periods of extreme chronic pain, which spread throughout my body, came and went for the next 12 years, and they always over-extended their visit. Before I knew it, digestion had shut down, inflammation was at a high, but somehow, I was still smiling and determined to get better. I blame it on love, as it was something that was always present in my life. For that I am grateful.</p>
+<p>Forward again to 2005. Me: An uber-achiever. I began my PhD in Molecular Toxicology and Nutritional Biochemistry at the University of Toronto. Although I was not yet called to examine my own life, I was very curious about the role of the Western Diet in chronic pain and disease. And so I began to investigate the toxic effects of our Western diet, focusing on refined sugars and heavy metals, and the protective role of micronutrients (B vitamins, antioxidants) against cellular toxicity and stress.</p>
+<p>The more I researched and shared, the more I stepped into my role as a health leader and authority. I felt more empowered as a human being, and this would serve me well during my next pain episode.</p>
+<p>Tied with commitments of 24/7 graduate work, home search, love life, and exploring a new city, my stress was at an all time high, and my diet was poor. I didn’t know it though, as I was quite disconnected from my body, and from nutrition. I ended up getting very sick from chronic constipation to the point of having to get surgery. The surgery was thankfully minor, but this episode woke me up.</p>
+<p>For the first time in my life, I was motivated to clean up my lifestyle and forge my own path. My scientific curiosity and investigative personality had finally turned to my own life—to my diet and lifestyle, and I was determined to solve my problem.</p>
+<p>The notion of actively and purposefully cleansing our bodies from the inside using nutrient-dense real food, just as we clean our homes, cars, and work spaces, finally made sense to me. I was determined to release my inflammation and to revitalize my health.</p>
+<p>My entry point into this world of real food medicine started with the adoption of a smoothie lifestyle.</p>
+<p>This lifestyle greatly impacted my health and the health of my community.</p>
+<p>When I lost my wonderful father rapidly in 2010 to a stage 4 digestive cancer, my smoothie lifestyle held me up and kept me nourished while I grieved for months (and years). It’s been a bumpy journey for me filled with so many humbling life lessons.</p>
+<p>Deep breath.</p>
+<p>One thing I know for sure: My daily ‘green’ smoothie regimen helped me stay afloat and slowly rebuild a loving relationship with my body that continues to this day. That is the best medicine in the world— the kind that naturally cleanses, heals and re-energizes our whole body, and our minds too.</p>
+<p>We are entering a globally turbulent time. To survive as a collective, we must help each other reconnect to our bodies so we can better hear our inner truths.</p>
+<p>My mission is to turn my mess into a message that can inspire our collective to take a small step towards a cleaner lifestyle and a brighter future.</p>
+<p>Thank you for being here.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/about/` was built on 2025-08-21T12:10:44.451Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

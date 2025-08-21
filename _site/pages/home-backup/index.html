@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home-Backup</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<p>[vc_row row_scroll_icon=&quot;no&quot;][vc_column][vc_empty_space][rev_slider_vc alias=&quot;main-home&quot;][vc_empty_space height=&quot;50px&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; content_width=&quot;grid&quot;][vc_column][eltd_custom_font custom_font_tag=&quot;div&quot; font_size=&quot;25px&quot; line_height=&quot;45px&quot; font_style=&quot;italic&quot; font_weight=&quot;500&quot; letter_spacing=&quot;1px&quot; text_align=&quot;center&quot; content_custom_font=&quot;“Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.”&quot; color=&quot;#f47628&quot;][vc_empty_space height=&quot;50px&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot;][vc_column width=&quot;1/6&quot;][/vc_column][vc_column width=&quot;1/3&quot;][vc_empty_space height=&quot;10px&quot;][vc_single_image image=&quot;5400&quot; img_size=&quot;400x600&quot; style=&quot;vc_box_shadow&quot; css_animation=&quot;fadeInLeft&quot;][/vc_column][vc_column width=&quot;1/3&quot;][eltd_custom_font custom_font_tag=&quot;h3&quot; font_size=&quot;30px&quot; line_height=&quot;60px&quot; font_style=&quot;italic&quot; font_weight=&quot;600&quot; letter_spacing=&quot;2px&quot; text_align=&quot;center&quot; content_custom_font=&quot;DR. RHEA MEHTA IS AN INNOVATIVE SOCIAL ENTREPRENEUR AND ADVISOR AT THE INTERSECTION OF SCIENCE, HEALTH TECHNOLOGY, AND WELLNESS.&quot;][/vc_column][vc_column width=&quot;1/6&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; css=&quot;.vc_custom_1600866793563{margin-top: 50px !important;margin-bottom: 50px !important;background-color: #efeeee !important;}&quot;][vc_column][vc_row_inner content_width=&quot;grid&quot; el_class=&quot;home-content&quot;][vc_column_inner width=&quot;1/4&quot;][/vc_column_inner][vc_column_inner width=&quot;1/2&quot;][vc_column_text css_animation=&quot;fadeIn&quot; css=&quot;.vc_custom_1600866973458{padding-top: 60px !important;padding-bottom: 60px !important;}&quot;]</p>
+<p><em>Rhea holds a PhD in Molecular Toxicology and Nutritional Biochemistry from the University of Toronto and a Bachelor’s in Biomedical Sciences from the University of Waterloo with over 15 scientific publications.</em></p>
+<p><em>She’s the founder of Living Rhea, a scientific wellness consultancy with services including 1-on-1 health coaching (Institute for Integrative Nutrition), scientific communications (writing, research, talks, interviews), and strategic advisory.</em></p>
+<p><em>Rhea is the co--founder of <a href="http://www.thebowheadhealth.com">Bowhead Health</a>, a cutting-edge Canadian company leveraging blockchain and smart contract technology to help individuals safely track, own and manage their health and wellness data.</em></p>
+<p><em>She’s the founder of Global Smoothie Day, an inclusive wellness movement aimed at making the adoption of a nutritious, plant-based smoothie lifestyle feel achievable and exciting. Rhea also co-founded <a href="http://www.thisisreset.org">Reset</a>, a non-profit organization that creates tech-free immersive experiences and 4-day summer camps for adults to help them feel like kids again.</em></p>
+<p><em>Rhea is a featured member of the Mind Body Green Collective of global health and wellness experts, owing to her years writing for the platform and contributing as a thought leader in environmental toxicity.</em></p>
+<p><em>Rhea practices and teaches breathwork and kriya-kundalini yoga from the ancient Himalayan Vedantic Tradition (200 hr, Sattva Yoga Academy, India) and is also trained in sound ceremony (100 hr, Yoga Forest, Guatemala).</em></p>
+<p>[/vc_column_text][/vc_column_inner][vc_column_inner width=&quot;1/4&quot;][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; content_aligment=&quot;center&quot;][vc_column][vc_column_text]</p>
+<h3 id="want-to-connect-get-in-touch-with-dr-rhea"><strong>Want to connect? Get in touch with Dr. Rhea</strong></h3>
+<p><a href="mailto:dr.rhea@livingrhea.com">dr.rhea@livingrhea.com</a></p>
+<p>[/vc_column_text][eltd_button size=&quot;small&quot; type=&quot;solid&quot; hover_type=&quot;solid&quot; target=&quot;_blank&quot; icon_pack=&quot;&quot; hover_animation=&quot;fill-from-top&quot; font_weight=&quot;500&quot; link=&quot;https://www.livingrhea.com/about/&quot; color=&quot;#ffffff&quot; hover_color=&quot;#ffffff&quot; hover_background_color=&quot;#232323&quot; font_size=&quot;18px&quot; margin=&quot;10px 20px 10px 20px&quot; padding=&quot;10px 20px 10px 20px&quot; border_color=&quot;#f47628&quot; hover_border_color=&quot;#232323&quot; background_color=&quot;#f47628&quot; text=&quot;View Portfolio&quot;][eltd_button size=&quot;small&quot; type=&quot;solid&quot; hover_type=&quot;solid&quot; target=&quot;_blank&quot; icon_pack=&quot;font_awesome&quot; fa_icon=&quot;fa-linkedin&quot; hover_animation=&quot;fill-from-top&quot; font_weight=&quot;500&quot; link=&quot;https://www.linkedin.com/in/rheamehta/&quot; color=&quot;#ffffff&quot; hover_color=&quot;#ffffff&quot; hover_background_color=&quot;#232323&quot; font_size=&quot;18px&quot; margin=&quot;10px 20px 10px 20px&quot; padding=&quot;10px 20px 10px 20px&quot; border_color=&quot;#006faa&quot; hover_border_color=&quot;#232323&quot; background_color=&quot;#006faa&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; el_id=&quot;remove&quot;][vc_column width=&quot;2/3&quot;][eltd_section_title title=&quot;Welcome to Living Rhea!&quot; title_color=&quot;&quot; title_text_transform=&quot;uppercase&quot; title_text_align=&quot;center&quot; margin_bottom=&quot;&quot; title_size=&quot;medium&quot;][vc_empty_space][eltd_separator_with_icon icon_pack=&quot;font_awesome&quot; fa_icon=&quot;fa-heart&quot; sep_color=&quot;#2aa380&quot;][vc_empty_space][eltd_section_subtitle color=&quot;&quot; text_align=&quot;center&quot; text=&quot;My role is to help you unlock your healthiest potential, align with your intentions and become the master of your powerful mind.&quot; width=&quot;&quot;][vc_empty_space][vc_column_text]Hi! I'm Rhea, a Bio-Toxicologist and Optimal Living Coach based in Toronto. I started my 'health journey' over a decade ago as a PhD student researching the harmful effects of the western diet and lifestyle on the body and studying the role of high-dose nutrient therapy in preventing and reversing disease.</p>
+<p>In 2013 I founded Living Rhea, a health optimization and empowerment platform with a mission to guide changemakers to unlock their healthiest potential through a coaching program encompassing detoxification, functional nutrition, self-discovery and routine mastery.</p>
+<p>In 2015 I founded Global Smoothie Day on October 3rd as an opportunity to embrace inclusive self-care, share evidence-based truths and clean recipes, and most importantly, offer communities an accessible, sustainable and playful entry into the world of healthy living.</p>
+<p>Speaking of play, I also co-founded Camp Reset, an adult summer camp and digital detox along with 7 other Toronto-based community builders. Camp Reset is built on the pillars of play, connection and transformation. Check out the Impact section of this site to learn more about my social movements, including a clean living group I started on Facebook a few years ago, now with over 7000 members.</p>
+<p>A contributor to the Huffington Post and Mind Body Green, today I speak internationally on topics such as optimal life design, nutrition hacks to boost productivity and performance, and my personal story of battling chronic disease and stepping into health leadership.</p>
+<p>If you're interested in working with me, check out that section, otherwise I encourage you to visit my blog page and get health inspired![/vc_column_text][vc_empty_space][/vc_column][vc_column width=&quot;1/3&quot;][vc_empty_space height=&quot;50px&quot;][vc_single_image image=&quot;4802&quot; img_size=&quot;full&quot; alignment=&quot;center&quot; css_animation=&quot;fadeInRight&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; el_id=&quot;remove&quot;][vc_column][vc_empty_space][vc_empty_space][eltd_section_title title=&quot;The Manifesto&quot; title_color=&quot;&quot; title_text_transform=&quot;uppercase&quot; title_text_align=&quot;center&quot; margin_bottom=&quot;&quot; title_size=&quot;medium&quot;][vc_empty_space][eltd_separator_with_icon icon_pack=&quot;font_awesome&quot; fa_icon=&quot;fa-bullseye&quot; sep_color=&quot;#2aa380&quot;][vc_empty_space][eltd_section_subtitle color=&quot;&quot; text_align=&quot;center&quot; text=&quot;I’ve broken down the path to optimal living into four steps, and my goal is to guide you in each of these areas to support you on this transformative journey.&quot; width=&quot;&quot;][vc_empty_space][eltd_process_holder process_type=&quot;horizontal_process&quot; number_of_items=&quot;four&quot;][eltd_process_item highlighted=&quot;yes&quot; icon_pack=&quot;&quot; icon_only=&quot;no&quot; title=&quot;Dream&quot; text=&quot;Paint a multi-sensory picture of your seraphic self&quot; image=&quot;4796&quot;][eltd_process_item highlighted=&quot;yes&quot; icon_pack=&quot;&quot; icon_only=&quot;no&quot; title=&quot;Design&quot; text=&quot;Optimize your schedule to honour your daily intentions and goals&quot; image=&quot;4795&quot;][eltd_process_item highlighted=&quot;no&quot; icon_pack=&quot;&quot; icon_only=&quot;no&quot; title=&quot;Clean&quot; text=&quot;Identify and discard triggers from your body and lifestyle&quot; image=&quot;4794&quot;][eltd_process_item highlighted=&quot;yes&quot; icon_pack=&quot;&quot; icon_only=&quot;no&quot; title=&quot;Fuel&quot; text=&quot;Resolve inefficiencies in body and mind through functional nutrition and supplementation&quot; image=&quot;4792&quot;][/eltd_process_holder][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; content_width=&quot;grid&quot; el_id=&quot;remove&quot;][vc_column][vc_empty_space height=&quot;50px&quot;][vc_empty_space][eltd_section_title title=&quot;Latest On The Blog&quot; title_color=&quot;&quot; title_text_transform=&quot;uppercase&quot; title_text_align=&quot;center&quot; margin_bottom=&quot;&quot; title_size=&quot;medium&quot;][vc_empty_space][eltd_separator_with_icon icon_pack=&quot;font_awesome&quot; fa_icon=&quot;fa-bookmark&quot; sep_color=&quot;#2aa380&quot;][vc_empty_space][eltd_section_subtitle color=&quot;&quot; text_align=&quot;center&quot; text=&quot;Your one-stop resource for optimal living tips, advice and recipes&quot; width=&quot;&quot;][vc_empty_space][eltd_blog_list type=&quot;masonry&quot; order_by=&quot;date&quot; order=&quot;DESC&quot; image_size=&quot;square&quot; title_tag=&quot;h4&quot; number_of_posts=&quot;3&quot; text_length=&quot;0&quot;][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; el_id=&quot;remove&quot;][vc_column][vc_empty_space][eltd_section_title title=&quot;Testimonials&quot; title_color=&quot;&quot; title_text_transform=&quot;uppercase&quot; title_text_align=&quot;center&quot; margin_bottom=&quot;&quot; title_size=&quot;medium&quot;][vc_empty_space][eltd_separator_with_icon icon_pack=&quot;font_awesome&quot; fa_icon=&quot;fa-comments&quot; sep_color=&quot;#2aa380&quot;][vc_empty_space][eltd_section_subtitle color=&quot;&quot; text_align=&quot;center&quot; text=&quot;Hear what past clients and partners have said&quot; width=&quot;&quot;][vc_empty_space][eltd_testimonials testimonial_type=&quot;testimonials-slider&quot; dark_light_type=&quot;dark&quot; number=&quot;12&quot; show_title=&quot;no&quot; show_author=&quot;yes&quot; show_author_image=&quot;no&quot; show_position=&quot;yes&quot; animation_speed=&quot;5000&quot;][vc_empty_space][/vc_column][/vc_row][vc_row row_scroll_icon=&quot;no&quot; el_id=&quot;remove&quot;][vc_column][eltd_hover_banner image=&quot;4971&quot; link_target=&quot;_blank&quot; link=&quot;http://www.thechangemakerformula.com/&quot; hover_sheet_color=&quot;#5dba9f&quot; hover_sheet_opacity=&quot;.3&quot;][/vc_column][/vc_row]</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/home-backup/` was built on 2025-08-21T12:10:44.453Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

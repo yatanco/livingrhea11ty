@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Global Smoothie Day</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<p>[rev_slider alias=&quot;main-home-1&quot; slidertitle=&quot;GSD&quot;][/rev_slider]</p>
+<p>The GSD mission is to inspire as many people around the world to view the adoption of a nutritious, plant-based smoothie lifestyle as achievable and exciting.</p>
+<p>Why we care: We are entering a globally turbulent time. To survive as a collective, we must help each other reconnect to our bodies so we can better hear our inner truths. That starts with what we put inside!</p>
+<p>CALL TO ACTIONInspire your online community by sharing a smoothie selfie, a recipe, or re-sharing one of our photos below using the hashtag #globalsmoothieday</p>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-1.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-1-300x300.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-1-300x300.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-1-300x300.jpg&width=300&format=jpeg&via=transform" alt="Global Smoothie Day" width="300" height="300"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-2.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-2-300x300.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-2-300x300.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-2-300x300.jpg&width=300&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="300" height="300"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-3.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-3-300x300.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-3-300x300.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-3-300x300.jpg&width=300&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="300" height="300"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-4.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-4-300x300.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-4-300x300.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-4-300x300.jpg&width=300&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="300" height="300"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-5.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-5-300x300.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-5-300x300.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-5-300x300.jpg&width=300&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="300" height="300"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<h3 id="climate-focussed-interview-with-mindbodygreen-on-global-smoothie-day-featuring-leftovers-smoothie">CLIMATE-FOCUSSED INTERVIEW WITH <a href="https://www.mindbodygreen.com/articles/green-smoothie-recipe-that-incorporates-leftovers">MINDBODYGREEN</a> ON <a href="https://www.livingrhea.com/dr-rheas-research/healthy-green-smoothies/">GLOBAL SMOOTHIE DAY</a> FEATURING “LEFTOVERS SMOOTHIE”</h3>
+<h1 id="6-years-of-global-smoothie-day-highlights">6 Years of Global Smoothie Day Highlights</h1>
+<iframe src="https://www.youtube.com/embed/unWa3A6urZc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen=""></iframe>
+<p>Vegetarian Food Festival Q&amp;A with Plant Based Policy Expert Nital Jethalal</p>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Finsta_post_48421-qa9mbtximqgy7xnnbcybtr2cnwyw9lb1rrmln7asdo.jpg&width=350&format=avif&via=transform 350w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Finsta_post_48421-qa9mbtximqgy7xnnbcybtr2cnwyw9lb1rrmln7asdo.jpg&width=350&format=webp&via=transform 350w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Finsta_post_48421-qa9mbtximqgy7xnnbcybtr2cnwyw9lb1rrmln7asdo.jpg&width=350&format=jpeg&via=transform" alt="insta_post_48421" title="insta_post_48421" width="350" height="350"></picture></p>
+<p>Instagram Live Interview with Chef Charles Michel, Finalist on Netflix’s The Final Table</p>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fimg_featured_851481-qa9mbszofwfnwbp0gujp99aw2j3j1w7bfmz45xc6jw.jpg&width=350&format=avif&via=transform 350w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fimg_featured_851481-qa9mbszofwfnwbp0gujp99aw2j3j1w7bfmz45xc6jw.jpg&width=350&format=webp&via=transform 350w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fimg_featured_851481-qa9mbszofwfnwbp0gujp99aw2j3j1w7bfmz45xc6jw.jpg&width=350&format=jpeg&via=transform" alt="img_featured_851481" title="img_featured_851481" width="350" height="350"></picture></p>
+<p>MindBodyGreen interview with Global Smoothie Day featuring the 2020 “Leftovers Smoothie”</p>
+<p>GSD COMMUNITY PARTIES</p>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-1.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-1.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-1.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-1.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="667"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-2.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-2.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-2.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-2.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="667"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-3.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-3.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-3.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-3.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="667"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-4.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-4.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-4.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-4.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="667"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-5.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-5.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-5.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-5.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="667"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-6-e1691422384549.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-6-e1691422384549.jpg&width=667&format=avif&via=transform 667w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-6-e1691422384549.jpg&width=667&format=webp&via=transform 667w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-6-e1691422384549.jpg&width=667&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="667" height="582"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2023/08/gsd-gallery-7-e1691423261744.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-7-e1691423261744.jpg&width=667&format=avif&via=transform 667w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-7-e1691423261744.jpg&width=667&format=webp&via=transform 667w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-7-e1691423261744.jpg&width=667&format=jpeg&via=transform" alt="" width="667" height="582"></picture></a></p>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-8-e1691423312419.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-8-e1691423312419.jpg&width=667&format=avif&via=transform 667w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-8-e1691423312419.jpg&width=667&format=webp&via=transform 667w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-8-e1691423312419.jpg&width=667&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="667" height="582"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-9-e1691423339218.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-9-e1691423339218.jpg&width=667&format=avif&via=transform 667w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-9-e1691423339218.jpg&width=667&format=webp&via=transform 667w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-9-e1691423339218.jpg&width=667&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="667" height="582"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="https://www.livingrhea.com/wp-content/uploads/2020/09/gsd-gallery-10-e1691423372413.jpg"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-10-e1691423372413.jpg&width=667&format=avif&via=transform 667w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-10-e1691423372413.jpg&width=667&format=webp&via=transform 667w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-gallery-10-e1691423372413.jpg&width=667&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="667" height="582"></picture></a></p>
+<figcaption>
+<p>Global Smoothie Day Community Event</p>
+</figcaption>
+</figure>
+<p>GSD COMMUNITY PARTY CROATIA! <picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-croatia.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-croatia.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-croatia.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="750"></picture></p>
+<h3 id="gsd-community-party-india">GSD COMMUNITY PARTY INDIA!</h3>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-india.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-india.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-india.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="750"></picture></p>
+<h3 id="gsd-community-party-kenya">GSD COMMUNITY PARTY KENYA!</h3>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-kenya.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-kenya.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-kenya.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="750"></picture></p>
+<h3 id="gsd-community-party-uganda">GSD COMMUNITY PARTY UGANDA!</h3>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-uganda.jpg&width=1000&format=avif&via=transform 1000w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-uganda.jpg&width=1000&format=webp&via=transform 1000w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fgsd-uganda.jpg&width=1000&format=jpeg&via=transform" alt="Global Smoothie Day Community Event" width="1000" height="750"></picture> BESIDES CELEBRATING WITH US ON OCTOBER 3RD EVERY YEAR (MARK YOUR CALENDARS!), YOU CAN SUPPORT OUR MISSION BY:</p>
+<ul>
+<li>Making smoothies with and for your family and friends</li>
+<li>Visiting the <a href="https://www.livingrhea.com/tag/green-smoothies/">smoothie</a> bars who are making high quality (nutrient-dense, local, organic) drinks in your area</li>
+<li>Sharing our amazing starter kit and e-book with those you love</li>
+</ul>
+<p><a href="https://www.dropbox.com/s/btdvkhr22sg1otp/Global%20Smoothie%20Day%20E-Book_2020.pdf?dl=0">DOWNLOAD OUR FREE GSD ON-BOARDING GUIDE &amp; RECIPE BOOK</a></p>
+<h3 id="join-our-movement-and-together-let-s-promote-inclusive-wellbeing-through-smoothie-solidarity">JOIN OUR MOVEMENT AND TOGETHER LET’S PROMOTE INCLUSIVE WELLBEING THROUGH SMOOTHIE SOLIDARITY</h3>
+<p>As featured in</p>
+<p><a href="https://www.huffpost.com/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhuffington-post.png&width=124&format=avif&via=transform 124w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhuffington-post.png&width=124&format=webp&via=transform 124w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhuffington-post.png&width=124&format=png&via=transform" alt="" width="124" height="77"></picture></a><a href="https://drhyman.com/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhyman.png&width=128&format=avif&via=transform 128w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhyman.png&width=128&format=webp&via=transform 128w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhyman.png&width=128&format=png&via=transform" alt="" width="128" height="40"></picture> </a><a href="https://www.mindbodygreen.com/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmbg.jpg&width=87&format=avif&via=transform 87w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmbg.jpg&width=87&format=webp&via=transform 87w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmbg.jpg&width=87&format=jpeg&via=transform" alt="" width="87" height="45"></picture> </a><a href="https://www.academyoflions.com/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Facadamy.jpeg&width=68&format=avif&via=transform 68w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Facadamy.jpeg&width=68&format=webp&via=transform 68w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Facadamy.jpeg&width=68&format=jpeg&via=transform" alt="" width="68" height="68"></picture> </a><a href="https://www.vibe105to.com/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fvibe.png&width=67&format=avif&via=transform 67w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fvibe.png&width=67&format=webp&via=transform 67w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fvibe.png&width=67&format=png&via=transform" alt="" width="67" height="67"></picture> </a><a href="https://www.theinnerchangemaker.com/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchangemaker.png&width=134&format=avif&via=transform 134w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchangemaker.png&width=134&format=webp&via=transform 134w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchangemaker.png&width=134&format=png&via=transform" alt="" width="134" height="57"></picture> </a></p>
+<blockquote>
+<p>“THE #GLOBALSMOOTHIEDAY MISSION IS TO RAISE AWARENESS OF WHOLE FOOD BLENDED NUTRITION IN A WAY THAT’S EASY AND FUN.”</p>
+<p>DR. MARK HYMAN, 10X NEW YORK TIMES BEST SELLING AUTHOR</p>
+</blockquote>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/global-smoothie-day/` was built on 2025-08-21T12:10:44.453Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

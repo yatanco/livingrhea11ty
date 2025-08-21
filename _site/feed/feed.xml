@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Blog Title</title>
+  <subtitle>This is a longer description about your blog.</subtitle>
+  <link href="https://example.com/feed/feed.xml" rel="self" />
+  <link href="https://example.com/" />
+  <updated>2025-08-21T10:29:30Z</updated>
+  <id>https://example.com/</id>
+  <author>
+    <name>Your Name</name>
+  </author>
+  <entry>
+    <title>How to make sense of body acidity (draft)</title>
+    <link href="https://example.com/blog/_drafts/make-sense-body-acidity/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/make-sense-body-acidity/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>How do we lose fat? (draft)</title>
+    <link href="https://example.com/blog/_drafts/lose-fat/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/lose-fat/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>How to whiten your teeth, sans chemicals (draft)</title>
+    <link href="https://example.com/blog/_drafts/whiten-teeth-sans-chemicals/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/whiten-teeth-sans-chemicals/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>My must-have products on-the-go (draft)</title>
+    <link href="https://example.com/blog/_drafts/must-products-go/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/must-products-go/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Meat and longevity. What&#39;s the connection? (draft)</title>
+    <link href="https://example.com/blog/_drafts/meat-longevity-whats-connection/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/meat-longevity-whats-connection/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>How to make positive change last (draft)</title>
+    <link href="https://example.com/blog/_drafts/make-positive-change-last/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/make-positive-change-last/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>What the heck is detoxification? (draft)</title>
+    <link href="https://example.com/blog/_drafts/heck-detoxification/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/heck-detoxification/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>How to eat when your metabolism is compromised (draft)</title>
+    <link href="https://example.com/blog/_drafts/eat-metabolism-compromised/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/eat-metabolism-compromised/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>How to make use of leftover plant-based food scraps (draft)</title>
+    <link href="https://example.com/blog/_drafts/make-use-leftover-plant-based-food-scraps/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/make-use-leftover-plant-based-food-scraps/</id>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>undefined (draft)</title>
+    <link href="https://example.com/blog/_drafts/id-8670/" />
+    <updated>2025-08-21T10:29:30Z</updated>
+    <id>https://example.com/blog/_drafts/id-8670/</id>
+    <content type="html">&lt;p&gt;how to make the&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;how to amkdma&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
+</feed>

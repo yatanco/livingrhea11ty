@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Gratitude is my way of life</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="gratitude-is-my-way-of-life">Gratitude is my way of life</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2014-10-14">14 October 2014</time></li>
+	<li><a href="/tags/appreciation/" class="post-tag">appreciation</a>, </li>
+	<li><a href="/tags/community/" class="post-tag">community</a>, </li>
+	<li><a href="/tags/gratitude/" class="post-tag">gratitude</a>, </li>
+	<li><a href="/tags/love/" class="post-tag">love</a>, </li>
+	<li><a href="/tags/support/" class="post-tag">support</a></li>
+</ul>
+
+<p><s>_With love and gratitude</s>_</p>
+<p>A little over a year ago I had a really profound realization that took over my mind and body. For a long period, I froze in deep reflection about the way in which I was living my life.  As I traveled through the past, I realized I hadn't been grateful enough--- for my family, my friends, my relationships, my opportunities, my  gifts, my breath, my senses, my mind. <strong>I had never expressed gratitude before in an open, honest, and loving way.</strong></p>
+<p>I never quite understood the power of truly expressing gratitude, to self and others. But now I know that the simple act of saying <em>thank you</em> and meaning it is one that is incredibly healing to both the sender and receiver. Since that transformative insight revealed itself, I'm a changed person, and I am grateful for that.</p>
+<p>Today, gratitude comes first, literally. I start my day with it and close my evening with it. I begin my day recounting moments I'm grateful for and <em>why.</em> I may complete this activity in silence, or sometimes my partner and I will do it together. Throughout the week, I will do what I can do let one or more persons know how I feel about them, or how much I appreciate them. I send them what I refer to as &quot;love blasts,&quot; as it's generally done over the phone or internet.  On most evenings, I will try and scan my day and think about several fun moments that occurred. It's an activity that has brought me much joy.</p>
+<p>Besides expressing gratitude in retrospect or via technology, I also do so in real human time. It's a great exercise in awareness and communication. Before I speak my truth, I always make sure to catch the eyes of the receiver. Once I have their eyes, and hence their attention, I smile and let them know how I feel. Often I'll hold on to the gaze for an extended period of time, which I know brings out discomfort in many of us. But beyond that discomfort, based on my experience, is someone who truly wants to be loved and appreciated. I hold onto that feeling, which gives me the strength to break through my own discomfort.</p>
+<p><strong>Today I want to express how grateful I am to my community for listening, reading, participating, supporting, encouraging, cheering, critiquing, hosting, editing, photographing, filming, sharing, raving, servicing, strategizing, brainstorming, believing, commending, seeing, and loving.</strong></p>
+<p>I'm filled with happiness at the thought of how much my community has done for me and the Living Rhea team.  Thank you all, from the bottom of my heart.</p>
+<p>I can't list you all, but I will mention some of you who've been involved with some serious projects, including the launch of my website, photography &amp; videography, design &amp; marketing, strategy &amp; advisory, and event &amp; media support.</p>
+<p><strong>Photography &amp; Videography</strong></p>
+<ul>
+<li><a href="http://www.diananazareth.com/">Diana Nazareth</a></li>
+<li><a href="http://www.10framehandles.com/">Bob Gundu</a></li>
+<li><a href="http://www.christinechangphotoblog.com/">Christine Chang Photography</a></li>
+<li><a href="http://www.mattjenkinsphotography.ca">Matt Jenkins Photography</a></li>
+<li><a href="yasparodi@gmail.com">Yasmin Parodi</a></li>
+<li><a href="brennan.caverhill@gmail.com">Brennan Caverhill</a></li>
+<li><a href="elliclevene@gmail.com">Elli Levine</a></li>
+</ul>
+<p><strong>Design &amp; Marketing</strong></p>
+<ul>
+<li><a href="http://oxagency.ca">Ox Agency</a></li>
+<li><a href="http://pixelhero.ca">Pixel Hero</a></li>
+<li>Pam Costa</li>
+<li>Julie Kroll</li>
+<li><a href="http://laudadio.ca">Jason Laudadio</a></li>
+<li>Neeta Bhushan</li>
+<li>Vega</li>
+<li>Strawesome</li>
+<li>Cuppow</li>
+<li>Manitoba Harvest</li>
+<li>Blendtec</li>
+<li>Jordan Milne</li>
+<li>Erwin Benedict Valencia</li>
+<li>Camp Awesomeness, Burning Man</li>
+<li>Dean and Lisa Grafos</li>
+<li>Inbal Shreemohan</li>
+<li>Erin Diedling</li>
+<li>Steffani Fort LeFevour</li>
+<li>Jess Rimington</li>
+<li>Josie Dempsey</li>
+</ul>
+<p><strong>Strategy &amp; Advisory</strong></p>
+<ul>
+<li>Ameet Mehta</li>
+<li>Birju Patel</li>
+<li>Jehan Bâby</li>
+<li>Jana Beeman</li>
+<li>Angel Quintana</li>
+<li>Marlo Wright</li>
+<li>Catherine Storing</li>
+<li>Mark Greenspan</li>
+<li>Robert Brauer</li>
+<li>Myron Luis</li>
+<li>Dhru Purohit</li>
+<li>Satya Kamdar</li>
+<li>Andrew Pototchsnik</li>
+<li>Maryn Antsey</li>
+<li>Julia Pyzik</li>
+<li>Nirav Sheth</li>
+<li>Max Marmer</li>
+<li>Sean Thompson</li>
+<li>Ivan Fong</li>
+<li><a href="http://corinnek.ca">Corinne A Korytkowski</a></li>
+<li>Justin Brown</li>
+<li>Patrick Eckstrom</li>
+<li><a href="http://www.hrostoski.com">Mike Hrostoski</a></li>
+<li>Ali Shanti</li>
+<li>Toronto Entrepreneurs for Passion and Purpose</li>
+<li><a href="http://www.thestillnessproject.com">Tom Cronin</a></li>
+<li>Jennifer Spencer</li>
+<li>Rahul Sarugaser</li>
+<li>Derek Brawley</li>
+<li>Jim Dewilde</li>
+<li>Reva Seth</li>
+<li>Peter Kroll</li>
+<li>Luke Barbara</li>
+</ul>
+<p><strong>Events &amp; Media</strong></p>
+<ul>
+<li>Aparna Sethuraman</li>
+<li><a href="http://www.nushnosh.ca/">Anushka Persaud-Garnier</a></li>
+<li>Manjit Bumrah</li>
+<li>Tanya Pillay</li>
+<li>Sarah Delaney</li>
+<li>Tammy Singh</li>
+<li>Ruby Bumrah</li>
+<li>Sanjeev Goel</li>
+<li>Shetu Modi</li>
+<li>Canadian Press</li>
+<li><a href="http://www.giftedentrepreneur.com/the-a-list-rhea-mehta-of-living-rhea/">Giovanni Marsico</a></li>
+<li><a href="http://www.finerminds.com/health-fitness/gratitude-collaboration-day-1/">Andrea Vega</a> via Finer Minds</li>
+<li><a href="http://radicalselflove333.wordpress.com/2014/01/31/rsls-feature-friday-dr-rhea-mehta-living-rhea-day-224-365-radical-self-love-project/">Kelsey Grant</a> via Radical Self Love</li>
+<li>Brandon Waloff via Project Juice</li>
+<li>Consciousness Explorer's Club</li>
+<li>Advanced Medical Research Institute of Canada</li>
+<li>Huffington Post</li>
+<li>McLean Greaves</li>
+<li>Zoomer Media</li>
+<li>Ideapod</li>
+<li><a href="http://www.mindbodygreen.com/wc/dr-rhea-mehta">Mind Body Green</a></li>
+<li>Anokhi Media</li>
+<li>Daniel Ashwin Pillai</li>
+<li>Sonia Jhas</li>
+<li>Pedestrian Sundays, Kensington Market</li>
+<li>4 Life Natural Foods, Kensington Market</li>
+<li><a href="http://markgreenspan.com/">Mark Greenspan</a></li>
+<li>Cathy Muffolini</li>
+<li>HQ</li>
+<li><a href="http://www.girlabouttoronto.com/tag/digest-digest/">Girl About Toronto</a></li>
+</ul>
+<p></p>
+<p><strong>To our entire community: THANK YOU, THANK YOU, THANK YOU!</strong></p>
+<p></p>
+<p><img src="content/blog/images/id--1470" alt=""></p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/burning-man-wellness/">My no-burn-out self-care package for Burning Man</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/health-and-wellness-coach/">Why I Choose to be a Coach</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/blog/with-love-and-gratitude/` was built on 2025-08-21T12:10:44.467Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

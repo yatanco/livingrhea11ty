@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Blog</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h2 id="blog">Blog</h2>
+<p>All Poetic Reflections Product Reviews Publications &amp; Interviews Recipes Scientific Wellness</p>
+<p><a href="https://www.livingrhea.com/the-changemaker-formula-smoothie-challenge/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchange-maker-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchange-maker-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchange-maker-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="changemaker-formula" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="the-changemaker-formula-a-transformative-30-day-smoothie-challenge"><a href="https://www.livingrhea.com/the-changemaker-formula-smoothie-challenge/">The Changemaker Formula – a transformative 30 day smoothie challenge</a></h3>
+<p><a href="https://www.livingrhea.com/the-changemaker-formula-smoothie-challenge/">Read More »</a> January 11, 2021</p>
+<p><a href="https://www.livingrhea.com/centre-for-advanced-medicine/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcam-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcam-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcam-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="Centre-for-Advanced-Medicine" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="why-i-joined-forces-with-canada-s-premier-functional-medicine-clinic-as-a-toxicity-and-lifestyle-management-practitioner"><a href="https://www.livingrhea.com/centre-for-advanced-medicine/">Why I Joined Forces with Canada’s Premier Functional Medicine Clinic as a Toxicity and Lifestyle Management Practitioner</a></h3>
+<p><a href="https://www.livingrhea.com/centre-for-advanced-medicine/">Read More »</a> December 10, 2020</p>
+<p><a href="https://www.livingrhea.com/benefit-from-medicinal-mushroom/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmedicinal-mashroom-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmedicinal-mashroom-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmedicinal-mashroom-300x200.jpg&width=300&format=jpeg&via=transform" alt="medicinal-mushroom" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="why-we-would-all-benefit-from-consuming-medicinal-mushrooms"><a href="https://www.livingrhea.com/benefit-from-medicinal-mushroom/">Why We Would All Benefit from Consuming Medicinal Mushrooms</a></h3>
+<p><a href="https://www.livingrhea.com/benefit-from-medicinal-mushroom/">Read More »</a> November 25, 2020</p>
+<p><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=jpeg&via=transform" alt="apollo-wearable-devce" width="300" height="200"></picture></a> Product Reviews</p>
+<h3 id="apollo-a-new-clinically-validated-wearable-device-that-improves-your-resilience-to-stress"><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/">Apollo: A New Clinically-Validated Wearable Device that improves your resilience to stress</a></h3>
+<p><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/">Read More »</a> November 4, 2020</p>
+<p><a href="https://www.livingrhea.com/integrative-health-coaches-role/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fiin-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fiin-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fiin-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="integrative-health-coaches" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="why-integrative-health-coaches-hold-a-critical-position-in-the-covid-era"><a href="https://www.livingrhea.com/integrative-health-coaches-role/">Why integrative health coaches hold a critical position in the COVID era</a></h3>
+<p><a href="https://www.livingrhea.com/integrative-health-coaches-role/">Read More »</a> October 24, 2020</p>
+<p><a href="https://www.livingrhea.com/future-of-healthcare-with-technology/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Ffuture-of-healthcare-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Ffuture-of-healthcare-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Ffuture-of-healthcare-300x200.jpg&width=300&format=jpeg&via=transform" alt="future of healthcare" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="the-future-of-healthcare-is-data-driven"><a href="https://www.livingrhea.com/future-of-healthcare-with-technology/">The Future of Healthcare is Data-Driven</a></h3>
+<p><a href="https://www.livingrhea.com/future-of-healthcare-with-technology/">Read More »</a> October 5, 2020</p>
+<p>Page1 <a href="https://www.livingrhea.com/wp-admin/admin-ajax.php/?e-page-e2fa479=2">Page2</a> <a href="https://www.livingrhea.com/wp-admin/admin-ajax.php/?e-page-e2fa479=3">Page3</a> … <a href="https://www.livingrhea.com/wp-admin/admin-ajax.php/?e-page-e2fa479=5">Page5</a></p>
+<p><a href="https://www.livingrhea.com/health-poetry-consequences/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fconsequences-image-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fconsequences-image-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fconsequences-image-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="" width="300" height="200"></picture></a> Poetic Reflections</p>
+<h3 id="consequences-my-creative-expression"><a href="https://www.livingrhea.com/health-poetry-consequences/">Consequences – My Creative Expression</a></h3>
+<p>CONSEQUENCES came to me at a time of deep inner reflection as I remembered my journey, and the journey of many members of my community. I’ve found myself feeling isolated at times, alone in my healthy choices and patterns. My healthy ways saved my life! And I’m blessed to be where I am today. But what I’ve realized overtime is that I can’t demand others adopt my strategies. I can inspire, while being me, and that is enough. CONSEQUENCES // I’m met with a choice To change my ways Are my habits serving me? Sometimes destructively Energy gone, emotions to grapple</p>
+<p><a href="https://www.livingrhea.com/health-poetry-consequences/">Read More »</a> June 7, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/choice/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchoice-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchoice-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchoice-300x200.jpg&width=300&format=jpeg&via=transform" alt="global impact" width="300" height="200"></picture></a> Poetic Reflections</p>
+<h3 id="choice-our-global-impact"><a href="https://www.livingrhea.com/choice/">Choice – Our Global Impact</a></h3>
+<p>Dapoxetina prezzo priligy 60 mg Per essere conformi agli standard internazionali e consentire ai pazienti dei paesi in via di sviluppo di avere accesso ai prodotti farmaceutici, tiene conto dei principi di base della protezione e della privacy dei dati ( pieno rispetto dei diritti e delle libertà dell’interessato e preservare un elevato livello di protezione dell’interessato ), che dovrebbe crescere a 2,6 miliardi di US nel 2018. Si possono facilmente mescolare culture e diversi ceti sociali a Montreal perché l’integrazione nazionale è ovvia. La telefarmacia si riferisce alla consegna di prodotti farmaceutici soggetti a dapoxetina prezzo priligy 60 mg</p>
+<p><a href="https://www.livingrhea.com/choice/">Read More »</a> March 3, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/taking-ownership-of-your-health/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fprevention1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fprevention1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fprevention1-300x200.jpg&width=300&format=jpeg&via=transform" alt="Prevention" width="300" height="200"></picture></a> Poetic Reflections</p>
+<h3 id="taking-ownership-of-your-health"><a href="https://www.livingrhea.com/taking-ownership-of-your-health/">Taking Ownership of Your Health</a></h3>
+<p>The poem I’m sharing today, PREVENTION, is about my experience with taking ownership of my health and life, as opposed to feeling like a victim to its circumstances. I hope you enjoy. PREVENTION // I wish I could face disease I wish I could feel motivated to step up now Practice self-care I want to wake up I want to feel my aliveness in every moment I want to feel inspired to step up now I want to enter health now It’s okay if I don’t know how The clues will come My desire is enough My vision is tough</p>
+<p><a href="https://www.livingrhea.com/taking-ownership-of-your-health/">Read More »</a> February 14, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/vital-signs/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FVitalSigns-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FVitalSigns-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FVitalSigns-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="" width="300" height="200"></picture></a> Poetic Reflections</p>
+<h3 id="vital-signs-times-of-pain-and-loss"><a href="https://www.livingrhea.com/vital-signs/">Vital Signs – Times of Pain and Loss</a></h3>
+<p>This creative burst has been an outlet for me to chant my soul’s song, using emotion and life experience. It’s been liberating to say the least, and I thank you for receiving my truth in this format. This next instalment, VITAL SIGNS, is connected to my father’s transition, and to my thoughts and experiences around the friends we keep closest to us, those who might not always have our healthiest interests at heart. VITAL SIGNS // Enter health She’s around you Surrounds you Within you Health gives us life But what is life Vitality or mediocrity? Do we seek help only</p>
+<p><a href="https://www.livingrhea.com/vital-signs/">Read More »</a> January 11, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/emotional-eating/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Femotionaleating-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Femotionaleating-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Femotionaleating-300x200.jpg&width=300&format=jpeg&via=transform" alt="Emotional Eating" width="300" height="200"></picture></a> Poetic Reflections</p>
+<h3 id="emotional-eating-you-re-not-alone"><a href="https://www.livingrhea.com/emotional-eating/">Emotional Eating – You’re Not Alone</a></h3>
+<p>Today, I’m sharing I’M READY with you. It’s about my experience with emotional eating. I’M READY // Food is ready Belly heavy Am I hungry? I take a bite Out of spite I’m angry I feel low Thinking slow Eyes are closing A shot of espresso Make that two Now I’m running To the energy crash I feel like trash Side of fries, please Home alone Sweet tooth wins Everytime How could this be I committed to me I’m lonely Help me please Just hold me and love me One more chance One last dance I’m ready I’m so lucky</p>
+<p><a href="https://www.livingrhea.com/emotional-eating/">Read More »</a> December 6, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/i-am-enough/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FHow-I-discovered-I-am-enough-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FHow-I-discovered-I-am-enough-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FHow-I-discovered-I-am-enough-300x200.jpg&width=300&format=jpeg&via=transform" alt="" width="300" height="200"></picture></a> Poetic Reflections</p>
+<h3 id="how-i-discovered-i-am-enough-poem"><a href="https://www.livingrhea.com/i-am-enough/">How I Discovered I am Enough (poem)</a></h3>
+<p>A couple of months ago, I began feeling and hearing this flow of words and experiences come through me – starting with I am enough. These segments of my story, my journey, through dis-ease, loss, rebirth, and aliveness rang true and powerful. To me, at least. At first, I shared them sparingly, only with my husband and a few others close to me. But I’m sharing them with you, now, because I want to practice what I often encourage my clients to do: to lean into their fears and step into the unknown. This series reflects my life, my experiences</p>
+<p><a href="https://www.livingrhea.com/i-am-enough/">Read More »</a> November 20, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=jpeg&via=transform" alt="apollo-wearable-devce" width="300" height="200"></picture></a> Product Reviews</p>
+<h3 id="apollo-a-new-clinically-validated-wearable-device-that-improves-your-resilience-to-stress-2"><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/">Apollo: A New Clinically-Validated Wearable Device that improves your resilience to stress</a></h3>
+<p>I’m excited to tell you about a groundbreaking stress reducing and sleep enhancing wearable device that actually works! It’s called Apollo Neuro, and it was created by Psychiatrist and Neuroscientist Dr. David Rabin, MD, PhD. It has been clinically validated to improve heart rate variability, a key metric of stress. Dr. Rabin noted that touch was overlooked in stress management, despite its ability to trigger safety to the body and lower stress. Through research, Dr. Rabin found that certain waves of vibration can bring our bodies and minds back to balance fast. And they can do this while improving our</p>
+<p><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/">Read More »</a> November 4, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/hemp-protein-powder-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhempprotein-e1485348581739-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhempprotein-e1485348581739-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhempprotein-e1485348581739-300x200.jpg&width=300&format=jpeg&via=transform" alt="Hemp Protein" width="300" height="200"></picture></a> Product Reviews</p>
+<h3 id="hemp-protein-powder-review"><a href="https://www.livingrhea.com/hemp-protein-powder-review/">Hemp Protein Powder Review</a></h3>
+<p>The perks: After several decades and cycles of prohibition and acceptance, along with multiple uses of this functional product, hemp is here to stay! And we’re happy about that, because as a food, hemp is a nutritional powerhouse. It’s not just a complete and easily digestible protein, it’s also enriched with essential fatty acids, omegas 6 and 3, in their balanced and ideal ratio of 3:75:1. Hemp is also the only food source of omega 6 gamma-linolenic acid, which has been shown to play a role in improving skin and hair health, balancing hormones, and preventing inflammation. Finally, hemp is</p>
+<p><a href="https://www.livingrhea.com/hemp-protein-powder-review/">Read More »</a> May 20, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/vegetable-spiralizer-product-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fspirooli-e1483756016529-300x203.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fspirooli-e1483756016529-300x203.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fspirooli-e1483756016529-300x203.jpg&width=300&format=jpeg&via=transform" alt="Veggie Spiralizer" width="300" height="203"></picture></a> Product Reviews</p>
+<h3 id="vegetable-spiralizer-product-review"><a href="https://www.livingrhea.com/vegetable-spiralizer-product-review/">Vegetable Spiralizer Product Review</a></h3>
+<p>The perks of a Spiralizer Make your own pasta out of vegetables with a vegetable spiralizer, also commonly referred to as a vegetable spiral slicer. For the foodies, the culinary curious, and those delving into the land of vegetarianism, the spiralizer is a kitchen gadget you must get your hands on! This gadget takes salads to a whole new level, by adding in a spiral twist. And the best part: the noodles, as satiating as they are, won’t leave you feeling full. Instead, they’ll fill you up with whole-food nutrition. Ideal veggies and fruits to play with include zucchini, daikon</p>
+<p><a href="https://www.livingrhea.com/vegetable-spiralizer-product-review/">Read More »</a> December 10, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/blendtec-blender-product-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fblendtec-e1483757571987-300x184.png&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fblendtec-e1483757571987-300x184.png&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fblendtec-e1483757571987-300x184.png&width=300&format=png&via=transform" alt="bledntec blender" width="300" height="184"></picture></a> Product Reviews</p>
+<h3 id="blendtec-blender-product-review"><a href="https://www.livingrhea.com/blendtec-blender-product-review/">Blendtec Blender Product Review</a></h3>
+<p>The perks of a Blendtec Blender Blentech high-speed blenders whip fruits, vegetables, nuts, seeds and superfoods into smooth and decadent smoothies, desserts, soups, sauces, yogurts, milks and lattes. Unlike regular blenders, these blenders are designed to break open the cell walls of whole foods in such a way as to release the nutrients, without harm, and to produce high-quality results in both taste and texture. The high speed action enables the heating of foods and the crushing of ice, and the multi-speed option allows you to control the blending process to meet your food needs. These blenders are powerful, versatile, and</p>
+<p><a href="https://www.livingrhea.com/blendtec-blender-product-review/">Read More »</a> December 7, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/excalibur-dehydrator-product-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2F2690-635624537148080000_Excalibur_9_Tray_Dehydrator_With_Timer_Black_Scale-ScaleNoWhiteSpace_w1252_h904-300x206.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2F2690-635624537148080000_Excalibur_9_Tray_Dehydrator_With_Timer_Black_Scale-ScaleNoWhiteSpace_w1252_h904-300x206.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2F2690-635624537148080000_Excalibur_9_Tray_Dehydrator_With_Timer_Black_Scale-ScaleNoWhiteSpace_w1252_h904-300x206.jpg&width=300&format=jpeg&via=transform" alt="Excalibur Dehydrator Living Rhea" width="300" height="206"></picture></a> Product Reviews</p>
+<h3 id="excalibur-dehydrator-product-review"><a href="https://www.livingrhea.com/excalibur-dehydrator-product-review/">Excalibur Dehydrator Product Review</a></h3>
+<p>The perks of a dehydrator Make your own nutrient-enriched kale chips, dried fruits (think fruit-roll up!), breads (gluten days be gone!), crackers and desserts with one of my favorite kitchen tools, a food dehydrator! Dehydrators deliver foods, using low temperature heating, with essentially the same nutrition (enzymes, vitamins, minerals) as their fresh counterparts. These quiet and easy to clean tools remove approximately 75% of the moisture from foods, resulting in foods that are infused with a beautiful array of concentrated flavors. These differ from classic heating tools like the oven, which use heat at high temperatures to remove moisture, resulting</p>
+<p><a href="https://www.livingrhea.com/excalibur-dehydrator-product-review/">Read More »</a> November 7, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/coconut-sweetener-product-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcoconutsugar-300x206.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcoconutsugar-300x206.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcoconutsugar-300x206.jpg&width=300&format=jpeg&via=transform" alt="Coconut Sugar" width="300" height="206"></picture></a> Product Reviews</p>
+<h3 id="coconut-sweetener-product-review"><a href="https://www.livingrhea.com/coconut-sweetener-product-review/">Coconut Sweetener Product Review</a></h3>
+<p>The perks Coconut sweetener, in the form of sweet nectar or dried crystals, originates from the blossoms of the coconut palm tree. When the blossoms are sliced from their stems, or when the tree is tapped, a naturally sweet, nutrient-enriched sap is released. To prep the sap for consumption, quality products are low-heat evaporated into a thick caramelly syrup. This process ensures the product remains raw, nutrient-enriched, and alive. The syrup can be used as is, or can be dried and ground into crystals, better known as coconut sugar. Coconut sweetener has an incredibly low glycemic index score of 35,</p>
+<p><a href="https://www.livingrhea.com/coconut-sweetener-product-review/">Read More »</a> September 18, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/14-health-sabotaging-myths-exposed-by-top-experts/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fdiet-e1485345264670-300x200.jpeg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fdiet-e1485345264670-300x200.jpeg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fdiet-e1485345264670-300x200.jpeg&width=300&format=jpeg&via=transform" alt="health myths" width="300" height="200"></picture></a> Publications &amp; Interviews</p>
+<h3 id="14-health-sabotaging-myths-exposed-by-top-experts"><a href="https://www.livingrhea.com/14-health-sabotaging-myths-exposed-by-top-experts/">14 Health-Sabotaging Myths Exposed By TOP Experts</a></h3>
+<p>I’m going to be lovingly honest here… There are far too many “health experts” preaching so-called “health advice” that we are being led to believe is the Holy Grail of the “healthy lifestyle” dream we’re chasing. They are spoonfeeding you catchy claims like: “6-pack secrets they don’t want you to know!” “Fat-burning formula to lose 20 lbs. in 7 days!” And best of all… “The limitless magic pill they created from a powerful ingredient accidentally discovered by a group of scientists in the ancient city of Timbuktu that will change EVERYTHING!” And unfortunately — we’re eating it right up.</p>
+<p><a href="https://www.livingrhea.com/14-health-sabotaging-myths-exposed-by-top-experts/">Read More »</a> April 17, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/optimal-living-formula/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FRHEA_3-300x221.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FRHEA_3-300x221.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FRHEA_3-300x221.jpg&width=300&format=jpeg&via=transform" alt="" width="300" height="221"></picture></a> Publications &amp; Interviews</p>
+<h3 id="podcast-interview-my-formula-for-optimal-living"><a href="https://www.livingrhea.com/optimal-living-formula/">[Podcast Interview] My Formula for Optimal Living</a></h3>
+<p>My willingness to being open to new perspectives and solutions has been a direct contributor to the flow, positivity and healing in my adult life. At age 15, I was told there was a very good chance I’d be in a wheelchair by my 40’s. I was told I had an auto-immune condition and there was nothing I could do but take medication. I bought into it for a while (8 years) and my body felt the pain immensely. I was debilitated and chronically stressed – from head to toe. Then one year, life *magically* shifted for me. And the</p>
+<p><a href="https://www.livingrhea.com/optimal-living-formula/">Read More »</a> August 4, 2015 No Comments</p>
+<p><a href="https://www.livingrhea.com/hemp-protein-powder-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhempprotein-e1485348581739-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhempprotein-e1485348581739-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhempprotein-e1485348581739-300x200.jpg&width=300&format=jpeg&via=transform" alt="Hemp Protein" width="300" height="200"></picture></a> Product Reviews</p>
+<h3 id="hemp-protein-powder-review-2"><a href="https://www.livingrhea.com/hemp-protein-powder-review/">Hemp Protein Powder Review</a></h3>
+<p>The perks: After several decades and cycles of prohibition and acceptance, along with multiple uses of this functional product, hemp is here to stay! And we’re happy about that, because as a food, hemp is a nutritional powerhouse. It’s not just a complete and easily digestible protein, it’s also enriched with essential fatty acids, omegas 6 and 3, in their balanced and ideal ratio of 3:75:1. Hemp is also the only food source of omega 6 gamma-linolenic acid, which has been shown to play a role in improving skin and hair health, balancing hormones, and preventing inflammation. Finally, hemp is</p>
+<p><a href="https://www.livingrhea.com/hemp-protein-powder-review/">Read More »</a> May 20, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/turmeric-faux-latte-my-anti-inflammatory-fix/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Ftumeric2-e1484831409414-300x199.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Ftumeric2-e1484831409414-300x199.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Ftumeric2-e1484831409414-300x199.jpg&width=300&format=jpeg&via=transform" alt="" width="300" height="199"></picture></a> Recipes</p>
+<h3 id="turmeric-faux-latte-my-anti-inflammatory-fix"><a href="https://www.livingrhea.com/turmeric-faux-latte-my-anti-inflammatory-fix/">Turmeric Faux Latte: My Anti-Inflammatory Fix</a></h3>
+<p>Description: Turmeric has become the talk of the town in the nutritional sciences community. Why? Because it’s such a potent anti-inflammatory. And let’s face it, the majority of us experience inflammation (stress) in one form or another on most days. This recipe is my twist on the popular ayurvedic Golden Milk. This one is low carb, which makes it acceptable for those who are drinking it for its medicinal value –&gt; to reduce inflammation.   Ingredients 1.5 cups warm water or tea (chaga, chai) 1/4 cup coconut cream or unsweetened nut milk 1 tbsp coconut oil or MCT oil 2</p>
+<p><a href="https://www.livingrhea.com/turmeric-faux-latte-my-anti-inflammatory-fix/">Read More »</a> April 19, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/green-warrior-smoothie/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fsmoothies-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fsmoothies-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fsmoothies-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="green smoothies living rhea" width="300" height="200"></picture></a> Recipes</p>
+<h3 id="green-warrior-smoothie"><a href="https://www.livingrhea.com/green-warrior-smoothie/">Green Warrior Smoothie</a></h3>
+<p>Description My Green Warrior Smoothie Recipe is incredibly nutrient-dense and delicious! It’s nicely balanced with fiber, protein and healthy fat to ensure the natural sugars aren’t metabolized so quickly, thereby preventing a spike in blood sugar. This blender full of goodness is equivalent to eating a humongous salad, that one surely wouldn’t be able to consume in one sitting. But since it’s pre-chewed by our genius friend, the high-speed blender, we can easily take in the healing goodness in a form that’s accessible and absorbable by our digestive tract. Score! Ingredients 3 cups water 2 cups of spinach 1/2 cup</p>
+<p><a href="https://www.livingrhea.com/green-warrior-smoothie/">Read More »</a> December 1, 2019 No Comments</p>
+<p><a href="https://www.livingrhea.com/foffee-my-high-energy-coffee-substitute-2/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchai-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchai-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchai-300x200.jpg&width=300&format=jpeg&via=transform" alt="foffee_living rhea" width="300" height="200"></picture></a> Recipes</p>
+<h3 id="foffee-my-high-energy-coffee-substitute"><a href="https://www.livingrhea.com/foffee-my-high-energy-coffee-substitute-2/">Foffee: My High Energy Coffee Substitute</a></h3>
+<p>Description Have you heard? Foffee is the new coffee substitute and it’s freaking delicious! Adrenal fatigue is a real thing. So is coffee addiction. If you’re thinking to yourself, I can’t give up my daily cup of java, maybe it’s time you practice a little detachment and try something different. The plus side is you’ll be getting a lot more goodness in that 1 cup, free from dependency. Ingredients 2 cups warm water or tea (chaga, chai) 1/4 cup coconut cream or unsweetened nut milk 1 tbsp coconut oil or MCT oil 1 tbsp raw cacao 1 heaping tsp maca powder</p>
+<p><a href="https://www.livingrhea.com/foffee-my-high-energy-coffee-substitute-2/">Read More »</a> December 19, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/raw-vegan-yogurt/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fyogurt-e1484769291350-300x199.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fyogurt-e1484769291350-300x199.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fyogurt-e1484769291350-300x199.jpg&width=300&format=jpeg&via=transform" alt="" width="300" height="199"></picture></a> Recipes</p>
+<h3 id="raw-vegan-yogurt-made-with-seeds"><a href="https://www.livingrhea.com/raw-vegan-yogurt/">Raw Vegan Yogurt (made with seeds!)</a></h3>
+<p>Description Yogurt without the dairy, yes it’s possible! This recipe captures the creaminess of the yogurt we all grew up on, without the post-snack slump or belly pain. And the best part: It’s ready within minutes. Nutrient-enriched, protein-heavy, probiotic-dosed, digestive-friendly – all in one easy recipe. Well, what are you waiting for? #tryit! Ingredients 1 cup water 2 cups pumpkin seeds or almonds, pre-soaked 1 tbsp lemon juice ½ tsp probiotic powder Instructions Step 1 To a high-speed blender, add water, followed by nuts/seeds and lemon juice. Blend on low, adding more water as needed, until a creamy yogurt consistency</p>
+<p><a href="https://www.livingrhea.com/raw-vegan-yogurt/">Read More »</a> December 11, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/vegetable-spiralizer-product-review/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fspirooli-e1483756016529-300x203.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fspirooli-e1483756016529-300x203.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fspirooli-e1483756016529-300x203.jpg&width=300&format=jpeg&via=transform" alt="Veggie Spiralizer" width="300" height="203"></picture></a> Product Reviews</p>
+<h3 id="vegetable-spiralizer-product-review-2"><a href="https://www.livingrhea.com/vegetable-spiralizer-product-review/">Vegetable Spiralizer Product Review</a></h3>
+<p>The perks of a Spiralizer Make your own pasta out of vegetables with a vegetable spiralizer, also commonly referred to as a vegetable spiral slicer. For the foodies, the culinary curious, and those delving into the land of vegetarianism, the spiralizer is a kitchen gadget you must get your hands on! This gadget takes salads to a whole new level, by adding in a spiral twist. And the best part: the noodles, as satiating as they are, won’t leave you feeling full. Instead, they’ll fill you up with whole-food nutrition. Ideal veggies and fruits to play with include zucchini, daikon</p>
+<p><a href="https://www.livingrhea.com/vegetable-spiralizer-product-review/">Read More »</a> December 10, 2016 No Comments</p>
+<p><a href="https://www.livingrhea.com/the-changemaker-formula-smoothie-challenge/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchange-maker-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchange-maker-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fchange-maker-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="changemaker-formula" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="the-changemaker-formula-a-transformative-30-day-smoothie-challenge-2"><a href="https://www.livingrhea.com/the-changemaker-formula-smoothie-challenge/">The Changemaker Formula – a transformative 30 day smoothie challenge</a></h3>
+<p>“The only constant in life is change”-Heraclitus. Despite our inherent desires to be and feel healthy, the majority of us are overcome with stress and confusion before we ever get the chance to try. I was there once upon a time, and it was an urgency that led me to change. I thankfully came out stronger and healthier, but it’s not fun to be the only one on this side. I won’t stop until we are collectively healthy. Changing our lifestyles is not easy. However, making micro-adjustments to certain aspects of our lifestyles might be a little easier to chew</p>
+<p><a href="https://www.livingrhea.com/the-changemaker-formula-smoothie-challenge/">Read More »</a> January 11, 2021 No Comments</p>
+<p><a href="https://www.livingrhea.com/centre-for-advanced-medicine/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcam-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcam-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcam-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="Centre-for-Advanced-Medicine" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="why-i-joined-forces-with-canada-s-premier-functional-medicine-clinic-as-a-toxicity-and-lifestyle-management-practitioner-2"><a href="https://www.livingrhea.com/centre-for-advanced-medicine/">Why I Joined Forces with Canada’s Premier Functional Medicine Clinic as a Toxicity and Lifestyle Management Practitioner</a></h3>
+<p>If you know me by now, you understand my belief in and commitment to the integrative healthcare model, one that encompasses conventional western medicine and traditional or holistic healing practices. For the past decade, I’ve immersed myself in working on solving different pieces of the healthcare puzzle, from health data management to the commercialization or business of scientific research, to working directly with individuals seeking alternative healing methods, to help educate and empower them to re-design their lifestyles with a renewed focus on clean and conscious living. My PhD in Pharmaceutical Sciences, and specifically, molecular toxicology, nutritional biochemistry, and the</p>
+<p><a href="https://www.livingrhea.com/centre-for-advanced-medicine/">Read More »</a> December 10, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/benefit-from-medicinal-mushroom/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmedicinal-mashroom-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmedicinal-mashroom-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fmedicinal-mashroom-300x200.jpg&width=300&format=jpeg&via=transform" alt="medicinal-mushroom" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="why-we-would-all-benefit-from-consuming-medicinal-mushrooms-2"><a href="https://www.livingrhea.com/benefit-from-medicinal-mushroom/">Why We Would All Benefit from Consuming Medicinal Mushrooms</a></h3>
+<p>Fungi have been around on the Earth for more than 2 billion years, pre-dating animal and plant life. While some species are poisonous, there are a number of species with superpowers that can nourish, heal, and boost the health of humans and our shared planet. The latter are referred to as medicinal mushrooms. These fungi deliver more healing than meets the eye. Superficially, they are loaded with vitamins and minerals, which is surely one of their superpowers. However, they also have bioactive components that they release to protect themselves during times of stress. These bioactive ingredients have incredibly therapeutic, and</p>
+<p><a href="https://www.livingrhea.com/benefit-from-medicinal-mushroom/">Read More »</a> November 25, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2FApollo-2-300x200.jpg&width=300&format=jpeg&via=transform" alt="apollo-wearable-devce" width="300" height="200"></picture></a> Product Reviews</p>
+<h3 id="apollo-a-new-clinically-validated-wearable-device-that-improves-your-resilience-to-stress-3"><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/">Apollo: A New Clinically-Validated Wearable Device that improves your resilience to stress</a></h3>
+<p>I’m excited to tell you about a groundbreaking stress reducing and sleep enhancing wearable device that actually works! It’s called Apollo Neuro, and it was created by Psychiatrist and Neuroscientist Dr. David Rabin, MD, PhD. It has been clinically validated to improve heart rate variability, a key metric of stress. Dr. Rabin noted that touch was overlooked in stress management, despite its ability to trigger safety to the body and lower stress. Through research, Dr. Rabin found that certain waves of vibration can bring our bodies and minds back to balance fast. And they can do this while improving our</p>
+<p><a href="https://www.livingrhea.com/apollo-clinically-validated-wearable-device/">Read More »</a> November 4, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/integrative-health-coaches-role/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fiin-1-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fiin-1-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fiin-1-300x200.jpg&width=300&format=jpeg&via=transform" alt="integrative-health-coaches" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="why-integrative-health-coaches-hold-a-critical-position-in-the-covid-era-2"><a href="https://www.livingrhea.com/integrative-health-coaches-role/">Why integrative health coaches hold a critical position in the COVID era</a></h3>
+<p>The events of 2020 have shed a bright light on the challenges of the healthcare system, as well as the opportunities. We’ve seen the rise of digital transformation in healthcare, as practitioners try and adapt to the new reality of virtual care. Digital health solutions are in many cases replacing therapies, or accompanying medications as chronic disease management and diagnostic tools. To facilitate this shift, we need educators who are helping both patients and their doctors with the adoption of this digital transition that seems to be here to stay. Digital is not the only shift this year. We’ve also</p>
+<p><a href="https://www.livingrhea.com/integrative-health-coaches-role/">Read More »</a> October 24, 2020 No Comments</p>
+<p><a href="https://www.livingrhea.com/future-of-healthcare-with-technology/"><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Ffuture-of-healthcare-300x200.jpg&width=300&format=avif&via=transform 300w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Ffuture-of-healthcare-300x200.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Ffuture-of-healthcare-300x200.jpg&width=300&format=jpeg&via=transform" alt="future of healthcare" width="300" height="200"></picture></a> Scientific Wellness</p>
+<h3 id="the-future-of-healthcare-is-data-driven-2"><a href="https://www.livingrhea.com/future-of-healthcare-with-technology/">The Future of Healthcare is Data-Driven</a></h3>
+<p>In the last article, we learned about how the physical environment affects us and how we can safeguard ourselves from potential toxins, as recommended by Dr. Rhea Mehta, Molecular Toxicologist, integrative nutrition advisor, and leader in health advocacy. In this last article of this series, we are going to see what is the future of healthcare with advancements in technology. The Future of Tracking and Compliance Rhea’s father was diagnosed with a lifestyle-triggered cancer, which naturally made Rhea an advocate of lifestyle medicine. She believes that we, as a community, need better measures in place to organize our health. We</p>
+<p><a href="https://www.livingrhea.com/future-of-healthcare-with-technology/">Read More »</a> October 5, 2020 No Comments</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/pages/blog/` was built on 2025-08-21T12:10:44.451Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

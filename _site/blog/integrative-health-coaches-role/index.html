@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Why integrative health coaches hold a critical position in the COVID era</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="why-integrative-health-coaches-hold-a-critical-position-in-the-covid-era">Why integrative health coaches hold a critical position in the COVID era</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2020-10-24">24 October 2020</time></li>
+	<li><a href="/tags/covid/" class="post-tag">covid</a>, </li>
+	<li><a href="/tags/healthcare/" class="post-tag">healthcare</a>, </li>
+	<li><a href="/tags/integrative-health-coaches/" class="post-tag">integrative-health-coaches</a></li>
+</ul>
+
+<p>The events of 2020 have shed a bright light on the challenges of the healthcare system, as well as the opportunities.</p>
+<p>We’ve seen the rise of digital transformation in healthcare, as practitioners try and adapt to the new reality of virtual care. Digital health solutions are in many cases replacing therapies, or accompanying medications as chronic disease management and diagnostic tools.</p>
+<p>To facilitate this shift, we need educators who are helping both patients and their doctors with the adoption of this digital transition that seems to be here to stay.</p>
+<p>Digital is not the only shift this year. We’ve also been reminded of the importance of holistic and nutritional health and wellbeing during this pandemic. We’ve been learning that those who are most vulnerable to this virus are often co-morbid, with existing illnesses, nutritional deficiencies, and gut dysbiosis.</p>
+<p>While there are several societal inequities that have contributed to these vulnerabilities, what’s important to highlight here is that the strongest guts and immune systems seem to have a higher chance at survival and defeat of Covid-related symptoms.</p>
+<p>What does this mean for healthcare? <strong>It means the integrative and preventative approach to healthcare is finally becoming more widely appreciated and practiced by conventional medicine.</strong> That in itself is worth celebrating, as it means nutritional and preventive approaches might finally get the clinical validation they deserve.</p>
+<h2 id="2020-the-turning-point-of-conventional-healthcare"><strong>2020: The Turning Point of Conventional Healthcare</strong></h2>
+<p>Healthcare has entered a new paradigm---at last. With this new paradigm, comes a new type of practitioner.</p>
+<p>This key healthcare player is both an educator and motivator. This role requires compassion, communication, and confidence.</p>
+<p>This new practitioner in the next generation of <a href="https://www.livingrhea.com/scientific-wellness/secrets-of-healthy-living/">healthcare</a> is referred to as an integrative health coach.</p>
+<h2 id="the-role-of-the-integrative-health-coach"><strong>The Role of the Integrative Health Coach</strong></h2>
+<p>What does this term mean, exactly? The term health coach has been very over-used, and in some ways, has tainted the space.</p>
+<p>These days, everyone is a health coach. That should be a good thing, right?</p>
+<p>The problem here is that the role of the health coach of the new world should be 2 fold:</p>
+<ul>
+<li>to truly hold space for patients, humanity, and self, and educate and share guidance from that place</li>
+<li>to act as a bridge for the two main buckets of healthcare: lifestyle medicine/preventative, and pharmaceutical-based care</li>
+</ul>
+<p>What’s unfortunate about the majority of health coaches who I’ve come across, is that there is an inherent rejection of the conventional practices, which doesn’t seem to be founded in facts or evidence. It seems to be more so related to anecdotal claims and a lack of true understanding of the roots of medicine.</p>
+<p>The health coaches of the future will carry an appreciation for whole-body medicine, which is all-encompassing while offering patients and the community at large education on nature-based living, care, and <a href="https://www.livingrhea.com/scientific-wellness/rawjuvenation-community-making-the-change-dr-rhea-mehta/">healing</a>.</p>
+<h3 id="here-s-a-list-of-types-of-questions-these-health-coaches-will-ask-themselves-as-they-work-on-their-own-behavior-change-and-that-of-their-clients"><strong>Here’s a list of types of questions these health coaches will ask themselves as they work on their own behavior change, and that of their clients:</strong></h3>
+<ul>
+<li>How can we use food as medicine?</li>
+<li>How can shift our daily routines to support a healthier and more joyful version of us?</li>
+<li>How can we plant seeds of hope, love, and acceptance into our minds?</li>
+<li>How can we develop a personal protocol based on all of our data points---both qualitative and quantitative, and have that work for us, our families, and our future generations?</li>
+<li>How do we identify and remove the triggers in our lifestyles and lifetimes that are hurting us today, yesterday or tomorrow?</li>
+<li>How do we hold space for the removal of these triggers, knowing that they may closely connect to our cultures, traditions, and stories?</li>
+<li>How do we truly teach to learn, and learn to teach?</li>
+<li>How do we ensure our personal stories and opinions are not being injected into our clients’ stories and lives?</li>
+</ul>
+<h2 id="my-cleanse-to-clarity-integrative-health-coaching-program-and-practice"><strong>My <em>Cleanse to Clarity</em> Integrative Health Coaching Program and Practice</strong></h2>
+<p>The coaching practice I’ve developed through my years of scientific training, _w_holistic learning, and personal development is grounded in these questions and curiosities.</p>
+<p>I lead with openness, but with foundations of safety and transparency.</p>
+<p>Data is power and fuel for my practice. So is holding a container for my clients’ stories and traumas—both known and unknown. This is key.</p>
+<p>I teach and share from that place.</p>
+<p><strong>My mission is to help people reconnect with their body wisdom, which holds the truth and personal health prescription.</strong></p>
+<p><strong>My approach is to start with a detailed vision which takes into account desires, dreams, goals, intentions, and stories. The painting is vivid and clear. And from that place, a roadmap is born.</strong></p>
+<p><strong>My commitment is to meet my clients where they are at, and take baby steps with them from that place.</strong></p>
+<p><strong>My program is designed to be impactful and empowering, so that lifestyle re-design and health optimization feels exciting and achievable.</strong></p>
+<h2 id="gratitude-to-my-teachers-mentors-and-guides"><strong>Gratitude to my teachers, mentors, and guides</strong></h2>
+<p>There are so many beings and teachers who have guided me on this powerful journey of self and community care and healing.</p>
+<p>They are school teachers, authors, thought leaders, healthcare practitioners, employers, dear friends, family, animals, plants, bacteria, and fungi(!!!), musicians, Vedic mantras, and the deep and wise silence.</p>
+<p>I want to give a special shoutout to the virtual school I attended that helped me formalize my coaching practice.</p>
+<h2 id="that-is-the-institute-for-integrative-nutrition"><a href="https://www.integrativenutrition.com/blog/2015/02/scientist-health-coach-dr-rhea-mehta-on-science-and-inspiration"><strong>That is the Institute for Integrative Nutrition.</strong></a></h2>
+<p>Through IIN, I developed the confidence to start a coaching practice. Through IIN, I had access to a giant resource of nutritional and holistic health wisdom. I also gained access to a community of health advocates and leaders.</p>
+<p>If you’re curious to learn more about this program and school, please comment below or reach out to <a href="mailto:dr.rhea@livingrhea.com">dr.rhea@livingrhea.com</a> and I can share a discount code with you.</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/future-of-healthcare-with-technology/">The Future of Healthcare is Data-Driven</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/apollo-clinically-validated-wearable-device/">Apollo: A New Clinically-Validated Wearable Device that improves your resilience to stress</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/blog/integrative-health-coaches-role/` was built on 2025-08-21T12:10:44.463Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

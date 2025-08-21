@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Secrets of Healthy Living with Dr. Rhea Mehta</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="secrets-of-healthy-living-with-dr-rhea-mehta">Secrets of Healthy Living with Dr. Rhea Mehta</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2020-09-22">22 September 2020</time></li>
+	<li><a href="/tags/changes-for-healthy-living/" class="post-tag">changes-for-healthy-living</a>, </li>
+	<li><a href="/tags/healthy-diet/" class="post-tag">healthy-diet</a>, </li>
+	<li><a href="/tags/healthy-eating/" class="post-tag">healthy-eating</a>, </li>
+	<li><a href="/tags/healthy-living/" class="post-tag">healthy-living</a>, </li>
+	<li><a href="/tags/healthy-living-tips/" class="post-tag">healthy-living-tips</a>, </li>
+	<li><a href="/tags/secrets-of-healthy-living/" class="post-tag">secrets-of-healthy-living</a></li>
+</ul>
+
+<p><em>In the last article, we learned about how Dr. Rhea Mehta, <a href="https://www.livingrhea.com/inspiration/get-rid-of-home-of-toxins-with-dr-rhea-mehta-molecular-toxicologist/">Molecular Toxicologist</a>, integrative nutrition advisor, and leader in health advocacy, made changes to her life and started the <a href="https://www.livingrhea.com/inspiration/rawjuvenation-community-making-the-change-dr-rhea-mehta/">RAWjuvenation community</a>.</em> This article will talk about <em>what changes everyone should make to their daily lives in order to attain healthy living.</em></p>
+<h2 id="top-4-indicators-of-healthy-living-poo-pee-sweat-breath"><strong>Top 4 Indicators of Healthy Living: Poo, Pee, Sweat, Breath</strong></h2>
+<p>Dr. Rhea Mehta shares the major indicators of healthy living that everyone can assess on their own, before they seek help, to better understand their personal health story. While she recommends personalized plans for every client, she believes this type of self-assessment can lead to greater health awareness, which alone can positively impact one’s life. The 4 indicators of healthy living are akin to the 4 major exit routes in the body: how we poop, how we pee, how we sweat, and how we breathe.  Rhea recommends that you pay attention to the type of poop exiting your body—in other words, not being afraid to look in the toilet after a bowel movement. She also suggests looking at the color of your pee, which indicates your hydration levels in the body. If you’re not sweating, she says you are missing out on cleansing toxins out of our largest organ, our skin. Finally, the simple acting of “checking your breath” will bring more awareness to the present moment, which is the greatest gift of all. The more we check out breath, the more we invite every part of us back into the moment.</p>
+<h2 id="habits-we-can-all-benefit-from"><strong>Habits We Can All Benefit From</strong></h2>
+<p>Dr. Rhea recommends the daily habits she believes, upon consistent practice, can lead people to living a more fulfilled life. These are as follows:</p>
+<h3 id="do-the-same-thing-every-day"><strong>Do the same thing every day</strong></h3>
+<p>When you repeat a practice consistently day after day, you are rewiring your brain to adjust for this and eventually this practice will be automatic, with little effort from you. Start with a maximum of 2-3 habits at any one time, so that you don’t overwhelm yourself. You’ll be well aware once they’re seeded, and then you can start to incorporate them into a more flexible routine (eg, while you travel for work or leisure), to ensure you don’t lose these critical habits when life gets in the way. Only then does she recommend moving on to the next few habits to implement.</p>
+<h3 id="sun-ceremony"><strong>Sun Ceremony</strong></h3>
+<p>When you wake up in the morning, spend some time with yourself. It may be five minutes or an hour. You could be sitting in silence, writing or speaking to your soul, reading the paper, or moving outdoors in nature. Starting your day with some loving presence creates space in your mind, and will undoubtedly help you better execute on your tasks for the day.</p>
+<h3 id="moon-ceremony"><strong>Moon Ceremony</strong></h3>
+<p>When you complete your day’s tasks, take a moment to reflect on your day. You may wish to include some calming tea, light a candle, or have a hot bath to help your whole being feel into the relaxing moment. Some prompts include: <em>“what could have made today better?</em>” or “<em>what inspired me most about today?</em>”</p>
+<h3 id="identify-daily-patterns-with-a-self-care-tracker"><strong>Identify daily patterns with a self-care tracker</strong></h3>
+<p>Rhea recommends that you keep track of your daily habits with a journal, to more easily identify patterns, both positive and negative. This is something she supports her clients with,  and that she believes is a critical part of their success in her health coaching program. For example, if you are seeding a habit of drinking X number of glasses of water, learning to meditate, or share positive words about yourself, you could document and track all of this in your journal.</p>
+<h2 id="rhea-s-approach-to-nutritional-healing-and-community-care"><strong>Rhea’s Approach to Nutritional Healing and Community Care</strong></h2>
+<p>Rhea's expert guidance on nutrition and healing is rooted in simplicity, diversity, and gut health. She believes everything we consume should be in service to the trillions of bacteria living in our bodies. She also believes in keeping things simple, and starting with the adding most critical nutrients versus doing a  complete 180 on our diet. The recipe she heavily promotes is an unsweetened green smoothie, which she views as a digestion-friendly channel to taking in more water, diverse nutrition, and specific super foods that are tailored to each of her clients’ needs.</p>
+<p>In fact, Rhea started a day called <strong><a href="https://www.livingrhea.com/globalsmoothieday/">Global Smoothie Day</a></strong>—on October 3rd, which is all about empowering people to onboard health through the promotion of an accessible smoothie lifestyle. “<em>We need to help people feel like healthy living is achievable”</em>,  and she believes smoothies are a great starting place.</p>
+<p>For Global Smoothie Day this year, Rhea created a 40 page free sustainable smoothie recipe eBook and on-boarding guide, with a specific smoothie making formula and case for using smoothies to break our food addictions and help us take better care of our shared planet.</p>
+<blockquote>
+<p>Download the free ebook <a href="https://www.livingrhea.com/globalsmoothieday/">here</a></p>
+</blockquote>
+<h2 id="supplements-for-optimal-health-and-plant-based-healthy-living"><strong>Supplements For Optimal Health and Plant-Based Healthy Living</strong></h2>
+<p>Most of Rhea's clients follow a plant-based diet or switch to a mostly plant-based diet after working with her. Rhea recommends taking  an algeal form of <a href="https://en.wikipedia.org/wiki/Omega-3_fatty_acid">Omega-3</a>, an activated B-complex, B-12 injections for pure vegetarians, Zinc, Vitamin D3 and K2 for bone health,  and Magnesium for multiple body functions, including helping with healthy bowel movements. In the US, over 40% of people are low in Magnesium. She also advises for people to get tested for low iron and Vitamin D3, which impacts vegans/vegetarians/women and people of color, respectively. She’s also a big fan of chlorella, a green algae, and other alkalizing, mineral rich sea greens and grasses, like spirulina, wheat grass and barley grass. Rhea will also recommend specific supplements based her clients’ needs. For example, if they are working on memory, clarity or hormone health, she will recommend specific powders or supplements to suit those purposes. She has plenty of resources and education to share with her clients, and she feels very strongly about equipping them with knowledge.</p>
+<h2 id="a-community-recipe-for-connection-and-transformation"><strong>A Community Recipe for Connection and Transformation</strong></h2>
+<p>Reset is a Toronto-based adult summer camp and digital detox community founded by Rhea and 7 other individuals in 2015 to counter loneliness with human connection and lots of play.</p>
+<p>When people arrive to this 4-day retreat in nature, they are asked to disconnect from their technology, something the majority of them have never done before for more than a few hours. People are also asked to re-name themselves and take on a whole new identity, free from their real life and work status.</p>
+<p>Rhea and her team spend months brainstorming on creative group activities to help people connect with their inner child and get back to who they really are at their core, outside of the identifiers fabricated by society. Participants are also invited to step outside of their comfort zones and try things for the first time, like write a song, create art, attempt stand up comedy or  dance like no one is watching. The result of this courage and new-found creativity is almost always transformation.</p>
+<p>Rhea feels as strongly about co-creating offline community care experiences as she does supporting individuals with 1:1 individual health and life coaching.</p>
+<p>She believes human connection is an essential component to our quality of life.</p>
+<p><em>In the next article of this series, we will see how the physical environment introduces toxins that affect how we live and what you can do to minimize this effect, as recommended by Dr. Rhea Mehta.</em></p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/affects-of-physical-environment/">Enviromental Awareness is Key to Optimal Living</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/future-of-healthcare-with-technology/">The Future of Healthcare is Data-Driven</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/blog/secrets-of-healthy-living/` was built on 2025-08-21T12:10:44.465Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
