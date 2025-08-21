@@ -8,7 +8,7 @@ eleventyNavigation:
 ---
 
 ## COACHING
-  ![](images/coaching-rhea.jpg)
+  ![](/pages/images/coaching-rhea.jpg)
 
 
 “The program that Rhea has put together is life transforming! Rhea herself has a wealth of information and great hacks that I was able to tap into and still continue to do so. We usually wait for tragedy to strike to make changes in our lives. Why wait! With this program I gained the awareness I was looking for with my body and mind connection. We often neglect the most important relationship we are having, and that's with ourselves! Thank you for reminding me of this, Rhea!”

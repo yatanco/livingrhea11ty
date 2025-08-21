@@ -3,10 +3,10 @@ title: "Home"
 date: 2020-11-06
 coverImage: "home-banner-3.jpg"
 ---
+  ![Rhea's Coaching](/pages/images/qr2.jpg)
 
-\[rev\_slider alias="main-home"\]\[/rev\_slider\]  ![](images/qr2.jpg) 
 
-### About Dr. Rhea Mehta
+# About Dr. Rhea Mehta
 
 ### **_DR. RHEA MEHTA IS AN INNOVATIVE ENTREPRENEUR AND ADVISOR AT THE INTERSECTION OF SCIENCE, WELLNESS, and empowerment_**
 
