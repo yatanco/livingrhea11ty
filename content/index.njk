@@ -6,10 +6,15 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 5;
 ---
-<h2>Dr. Rhea Mehta</h2>
+<h2>About Dr. Rhea Mehta</h2>
+
 <!-- Hero Image -->
 <section class="hero">
-  <img src="/pages/images/home-banner-3.jpg" alt="Welcome banner" style="width:100%; height:auto;" />
+  <img src="/pages/images/home-banner-3.jpg"
+       alt="Welcome banner"
+       loading="lazy"
+       decoding="async"
+       style="width:100%; height:auto;" />
 </section>
 
 <!-- Videos Section -->
@@ -17,46 +22,49 @@ const numberOfLatestPostsToShow = 5;
 
   <!-- Video 1 -->
   <div class="video-block">
-    <h3>About Dr. Rhea Mehta</h3>
     <p>
       Dr. Rhea Mehta is an innovative social entrepreneur and advisor at the intersection
       of science, health technology, and wellness.
-    </p>
-    <p>
+   ĉ
       Rhea holds a PhD in Molecular Toxicology and Nutritional Biochemistry from the University of Toronto
       and a Bachelor’s in Biomedical Sciences from the University of Waterloo with over 15 scientific publications.
       She’s the founder of Living Rhea, a scientific wellness consultancy with services including
       1-on-1 health coaching (Institute for Integrative Nutrition), scientific communications
       (writing, research, talks, interviews), and strategic advisory.
-
     </p>
-    <a class="learn-more" href="pages/about/">
-        Learn more →
-      </a>
+    <a class="learn-more" href="/pages/about/">
+      Learn more →
+    </a>
 
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/w7WLipkXmWQ?si=8IojIvjfpzLB4p7C"
-      title="Dr. Rhea Mehta"
-      frameborder="0"
-      allowfullscreen></iframe>
   </div>
+ <p></p>
 
   <!-- Video 2 -->
   <div class="video-block">
-    <h3>Coaching</h3>
+
+    <h2>Coaching</h2>
+    <section class="hero">
+  <img src="/pages/images/home-banner-2.jpg"
+       alt="Coaching Banner"
+       loading="lazy"
+       decoding="async"
+       style="width:100%; height:auto;" />
+</section>
+
     <p>
       Personal development for a lifetime of healthy and rewarding habits.
     </p>
     <p>
      As human beings we are designed to self-heal. However, over the years we both knowingly and unknowingly introduce fat-soluble toxicants in the form of pollutants, heavy metals, pesticides, processed foods, and solvents to our bodies. When our load rises above our ability to cleanse the system naturally, toxicants get stored, instead of released. The consequences of environmental toxicity, paired with poor nutrition from our diet and from the soil that grows our food, is a recipe for several of the chronic symptoms we experience today, such as brain fog, headaches, low energy, poor digestion, constipation, and body pain. If we don’t correct this, the build up can eventually disrupt our internal environment, leading to disease. The good news is there’s a lot we can do right now.
-       </p>
-        <!-- Learn More Link -->
+    </p>
+    <!-- Learn More Link -->
     <p>
-      <a class="learn-more" href="pages/coaching/">
+      <a class="learn-more" href="/pages/coaching/">
         Learn more →
       </a>
     </p>
-
+  </div>
+</section>
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -68,14 +76,5 @@ const numberOfLatestPostsToShow = 5;
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the blog section</a>.</p>
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the blog section</a>.</p>
 {% endif %}
-
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
