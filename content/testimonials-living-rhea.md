@@ -10,7 +10,7 @@ eleventyNavigation:
 
 _Rhea is like a walking breath of fresh air! She is poised, highly intelligent, and most of all she understands what it truly takes to lead a beautifully balanced life. I have had the privilege of working with Rhea in an intimate setting; she not only inspires me daily with her go-getter fire, but her natural ability to bring community and awareness to those seeking greater opportunities in their lives through holistic practices is phenomenal. Thank you Rhea for all that you bring to this planet; you truly are GOLD._
 
-**[Angel Quintana](https://angelquintana.com/), Founder of Holistic Fashionista and Podcast Host**
+**[Angel Quintana](https://www.sacredanarchy.org/about), Founder of Holistic Fashionista and Podcast Host**
 
 _Rhea offers a graceful combination of practical day-to-day logistical advice mixed with big-picture visioning. Working with her has triggered deep personal growth for me in terms of my diet, stress reduction, and even how I approach the world and my relationships. She is a patient and conscious listener and fantastic at answering the hard questions while helping you incorporate practices into your everyday life to stay. It is clear to me that what I’m learning with Rhea’s help will become cemented as habits and “ways of being” that will making a lasting impact on my well being. I’m extremely thankful to have stumbled into the opportunity to work with Rhea. It’s pretty rare to get to work with someone who has such in depth medical and scientific training (both in Eastern and Western philosophies), who also has so much to offer in the realm of mindfulness, intention-setting, and overall living more joyfully!_
 

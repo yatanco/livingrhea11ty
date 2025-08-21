@@ -28,8 +28,6 @@ In fact, I started Global Smoothie Day in 2015 to give my advocacy a platform an
 
 # **The Changemaker Formula: 4 weeks of Super Drinks**
 
-If you’re just starting out and wish to further educate yourself, you should read the e-book. If you’re already inspired and want to start experimenting in a safe way, I recommend my [Changemaker Formula 30-day smoothie challenge.](http://www.thechangemakerformula.com/)
-
 The way I see it: Smoothies are the new fast food, except unlike regular fast food, smoothies recharge your body with vitamins, minerals, phytonutrients, fiber, healthy fats, and protein. Basically everything you need to feel energized, poop well, and restore your health, without getting in the way of your busy lifestyle.
 
 ### **How It Works**

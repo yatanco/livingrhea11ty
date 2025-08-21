@@ -10,7 +10,7 @@ tags:
 coverImage: "RAWjuvenation-Community-1-scaled-1.jpg"
 ---
 
-_In the last article ([Read it here](https://www.livingrhea.com/inspiration/get-rid-of-home-of-toxins-with-dr-rhea-mehta-molecular-toxicologist/)), we learned about the struggles Dr. Rhea Mehta, [Molecular Toxicologist](https://www.livingrhea.com/inspiration/get-rid-of-home-of-toxins-with-dr-rhea-mehta-molecular-toxicologist/), integrative nutrition advisor, and leader in health advocacy, had to go through from an early age till the time she was doing her Ph.D._ This article will talk about the changes she made in her life and how she started the RAWjuvenation Community.
+_In the last article ([Read it here](/blog/get-rid-of-home-of-toxins-with-dr-rhea-mehta-molecular-toxicologist/)), we learned about the struggles Dr. Rhea Mehta, [Molecular Toxicologist](/blog/get-rid-of-home-of-toxins-with-dr-rhea-mehta-molecular-toxicologist/), integrative nutrition advisor, and leader in health advocacy, had to go through from an early age till the time she was doing her Ph.D._ This article will talk about the changes she made in her life and how she started the RAWjuvenation Community.
 
 ### **Taking a Different Path**
 
