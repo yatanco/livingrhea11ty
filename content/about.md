@@ -2,6 +2,9 @@
 title: "About"
 date: 2014-07-15
 coverImage: "about-new-banner.jpg"
+eleventyNavigation:
+      key: About
+      order: 3
 ---
 
  ABOUT 

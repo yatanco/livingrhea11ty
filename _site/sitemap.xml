@@ -87,13 +87,6 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/about/</loc>
-			<lastmod>2014-07-15</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/pages/cycle/</loc>
 			<lastmod>2014-07-17</lastmod>
 		</url>
@@ -577,7 +570,7 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/coaching/</loc>
+			<loc>https://example.com/coaching/</loc>
 			<lastmod>2017-01-03</lastmod>
 		</url>
 	
@@ -703,7 +696,7 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/testimonials-living-rhea/</loc>
+			<loc>https://example.com/testimonials-living-rhea/</loc>
 			<lastmod>2020-09-22</lastmod>
 		</url>
 	
@@ -738,7 +731,7 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/living-rhea/</loc>
+			<loc>https://example.com/living-rhea/</loc>
 			<lastmod>2020-11-06</lastmod>
 		</url>
 	
@@ -850,7 +843,7 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/music/</loc>
+			<loc>https://example.com/music/</loc>
 			<lastmod>2021-09-17</lastmod>
 		</url>
 	
@@ -920,91 +913,7 @@
 	
 		
 		<url>
-			<loc>https://example.com/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/tags/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/blog/_drafts/best-version/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/real/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/thermogenesis-metabolism-energy-whats-connection/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/whats-deal-night-shade-veggies/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/id-1764/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/id-1871/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/unhealthy-cravings-learn-create-healthy-distractions/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/id-1236/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/id-8670/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/make-positive-change-last/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/_drafts/make-use-leftover-plant-based-food-scraps/</loc>
 			<lastmod>2025-08-21</lastmod>
 		</url>
 	
@@ -1025,7 +934,56 @@
 	
 		
 		<url>
+			<loc>https://example.com/blog/_drafts/id-1236/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/id-1764/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/id-1871/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/id-8670/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
 			<loc>https://example.com/blog/_drafts/lose-fat/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/make-positive-change-last/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/make-sense-body-acidity/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/make-use-leftover-plant-based-food-scraps/</loc>
 			<lastmod>2025-08-21</lastmod>
 		</url>
 	
@@ -1046,6 +1004,34 @@
 	
 		
 		<url>
+			<loc>https://example.com/blog/_drafts/real/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/thermogenesis-metabolism-energy-whats-connection/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/unhealthy-cravings-learn-create-healthy-distractions/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/whats-deal-night-shade-veggies/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
 			<loc>https://example.com/blog/_drafts/whiten-teeth-sans-chemicals/</loc>
 			<lastmod>2025-08-21</lastmod>
 		</url>
@@ -1053,7 +1039,14 @@
 	
 		
 		<url>
-			<loc>https://example.com/blog/_drafts/make-sense-body-acidity/</loc>
+			<loc>https://example.com/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/tags/</loc>
 			<lastmod>2025-08-21</lastmod>
 		</url>
 	
