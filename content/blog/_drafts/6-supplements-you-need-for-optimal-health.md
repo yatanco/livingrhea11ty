@@ -15,7 +15,7 @@ tags:
   - "supplements-2"
   - "taking-supplements"
 coverImage: "supplement.jpg"
-draft: true
+draft: false
 ---
 
 **I’m often asked if supplements for optimal health are truly necessary and why we can’t just get those nutrients from the food we eat (followed by a question about what supplements you need to take for optimal health).**

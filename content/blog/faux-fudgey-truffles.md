@@ -1,54 +1,149 @@
 ---
 title: "Faux Fudgey Truffles"
+description: "Raw vegan fudgey truffles made with nuts, cacao, seeds, and superfoods. A guilt-free dessert packed with protein, good fats, and antioxidants for long-lasting energy."
 date: 2016-11-29
 categories: 
-  - "recipes"
+  - recipes
 tags: 
-  - "clean-living"
-  - "dessert"
-  - "healthy-recipes"
-  - "real-food"
-coverImage: "truffles.jpg"
+  - clean-living
+  - dessert
+  - healthy-recipes
+  - real-food
+cover: "/pages/images/truffles.jpg"
 ---
 
-**Description**
+![Faux Fudgey Truffles](/pages/images/truffles.jpg)
 
-Desserts shouldn’t make you feel guilty. They may be sweeter than the rest of your day’s meals, but hey! That’s why they call it dessert. What we don’t want, though, is a spike in sugar. Because that’s usually followed by a crash. My raw vegan balls are rich in flavour and experience. They’re also balanced nutritionally so you will feel a burst of energy and feel good feelings that will last you a long time, thanks to our friends protein and good fat. Whether you enjoy a ball as a dessert, weekend breakfast treat or a late afternoon snack, this dessert has got you covered in health, taste and energy.
+## Description
 
-**Ingredients**
+Desserts shouldn’t make you feel guilty. They may be sweeter than the rest of your day’s meals, but hey — that’s why they call it dessert.  
 
-2 cups almonds or walnuts, pre-soaked 8 hours 2 tbsp [hemp seeds](https://web.archive.org/web/20160822040949/https://www.livingrhea.com/products/hemp-seeds-product-review/) 2 tbsp [coconut oil](https://web.archive.org/web/20160822040949/https://www.livingrhea.com/products/coconut-oil-product-review/) 2 tbsp [raw cacao](https://web.archive.org/web/20160822040949/https://www.livingrhea.com/products/raw-cacao-product-review/) 1 tsp chia seeds 1-2 tbsp almond butter 2 tbsp goji berries, pre-soaked 10 minutes 2 tbsp black currants 2 tbsp maple syrup, pinch stevia or 1-2 tbsp xylitol sweetener 2 tbsp shredded coconut ¼ tsp ground cinnamon, vanilla, cardamom, fennel pinch sea salt and cayenne
+What we don’t want is a spike in sugar followed by a crash. These **raw vegan truffles** are nutritionally balanced, delivering sustained energy and good vibes thanks to protein and healthy fats.  
 
-**Instructions**
+Whether you enjoy them as dessert, a weekend breakfast treat, or an afternoon snack, these little fudgey bites have you covered.  
 
-**Step 1**
+---
 
-To a food processor, add rinsed and drained nuts or seeds, and mix until well chopped.
+## Ingredients
 
-**Step 2**
+- 2 cups almonds or walnuts (pre-soaked 8 hours)  
+- 2 tbsp hemp seeds  
+- 2 tbsp coconut oil  
+- 2 tbsp raw cacao  
+- 1 tsp chia seeds  
+- 1–2 tbsp almond butter  
+- 2 tbsp goji berries (pre-soaked 10 min)  
+- 2 tbsp black currants  
+- 2 tbsp maple syrup, pinch stevia, or 1–2 tbsp xylitol  
+- 2 tbsp shredded coconut  
+- 1/4 tsp ground cinnamon  
+- 1/4 tsp vanilla  
+- 1/4 tsp cardamom  
+- 1/4 tsp fennel  
+- Pinch sea salt  
+- Pinch cayenne  
 
-[](https://web.archive.org/web/20160822040949/https://www.livingrhea.com/wp-content/gallery/faux-fudgey-truffles/chocomaple_truffles_s1.jpg)
+---
 
-Add remaining ingredients and mix until well combined. Add some water if mixture is too dry.
+## Instructions
 
-**Step 3**
+### Step 1  
+Add rinsed and drained nuts or seeds to a food processor. Pulse until well chopped.  
 
-Transfer to bowl, and either place batch in fridge to bind for about 5-10 minutes, or begin rolling right away into balls. An alternative is to lay mixture onto a flat surface (container) and cut into squares. Garnish with shredded coconut or goji berries for a gourmet touch.
+### Step 2  
+Add remaining ingredients and process until well combined. Add a splash of water if mixture is too dry.  
 
-Tips and Techniques
+### Step 3  
+Transfer mixture to a bowl. Either:  
+- Chill in the fridge for 5–10 minutes to firm up, then roll into balls.  
+- OR spread flat in a container and cut into squares.  
 
-- Swap the sweetener entirely with 1 ripe banana, or 1/2 ripe banana + 1/2 avocado for a whole food experience
-- For a sugar-free or low sugar version, use green stevia or xylitol, a sugar alcohol
-- This dessert tastes equally as good when made with seeds, like sunflower or pumpkin!
-- For a stimulant-free version, use carob powder in place of cacao
+Garnish with shredded coconut or goji berries for a gourmet touch.  
 
-**Why I Love My Recipe**
+---
 
-I appreciate sweets, but I really don’t like feeling low and simultaneously craving more after just a few bites. This is why I really stress macronutrient balance. That is, a healthy balance of good fat, protein and carbs. My raw truffles give me long-lasting energy and satisfy my sweet tooth. Because they’re so dense and full of protein and good fat, they makes you full quickly and keep you from wanting to eat more and more, which is what often happens when desserts are sugar-heavy.
+## Tips and Techniques
 
-**Benefits**
+- Swap the sweetener for 1 ripe banana, or 1/2 banana + 1/2 avocado for a whole-food version.  
+- For low-sugar, use **green stevia** or **xylitol**.  
+- Substitute nuts with seeds (sunflower or pumpkin) for an allergy-friendly version.  
+- Use **carob powder** instead of cacao for a stimulant-free option.  
 
-- Nuts and seeds are high in health-promoting fat and digestible protein
-- Hemp seeds offer a perfect balance of essential fatty acids
-- Pre-soaking nuts and seeds removes anti-nutrients and improves digestibility
-- The powerful antioxidant raw cacao, otherwise known as the “bliss chemical” induces the production of certain neurotransmitters connected to positivity and happiness, and is also enriched with minerals, including magnesium and sulfur
+---
+
+## Why I Love My Recipe
+
+I love sweets, but I dislike the crash and cravings that follow most desserts. That’s why I focus on **macronutrient balance**: healthy fats, proteins, and carbs.  
+
+These truffles satisfy my sweet tooth while giving me long-lasting energy. Their nutrient density also makes them naturally portion-controlled — you feel satisfied with just one or two.  
+
+---
+
+## Benefits
+
+- Nuts and seeds → rich in protein and healthy fats  
+- Hemp seeds → perfect balance of essential fatty acids  
+- Pre-soaking nuts/seeds → removes anti-nutrients and boosts digestibility  
+- Raw cacao → antioxidant-rich “bliss chemical,” supports mood and provides magnesium + sulfur  
+
+---
+
+<!-- Recipe Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Faux Fudgey Truffles",
+  "image": "https://www.livingrhea.com/pages/images/truffles.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Rhea Mehta"
+  },
+  "datePublished": "2016-11-29",
+  "description": "Raw vegan fudgey truffles made with nuts, cacao, seeds, and superfoods. A guilt-free dessert packed with protein, good fats, and antioxidants.",
+  "recipeCategory": "Dessert",
+  "recipeCuisine": "Vegan",
+  "keywords": "vegan truffles, healthy dessert, raw cacao balls, energy bites",
+  "recipeYield": "12–15 truffles",
+  "prepTime": "PT15M",
+  "cookTime": "PT0M",
+  "totalTime": "PT15M",
+  "recipeIngredient": [
+    "2 cups almonds or walnuts (pre-soaked 8 hours)",
+    "2 tbsp hemp seeds",
+    "2 tbsp coconut oil",
+    "2 tbsp raw cacao",
+    "1 tsp chia seeds",
+    "1–2 tbsp almond butter",
+    "2 tbsp goji berries (pre-soaked 10 minutes)",
+    "2 tbsp black currants",
+    "2 tbsp maple syrup, pinch stevia, or 1–2 tbsp xylitol",
+    "2 tbsp shredded coconut",
+    "1/4 tsp ground cinnamon",
+    "1/4 tsp vanilla",
+    "1/4 tsp cardamom",
+    "1/4 tsp fennel",
+    "Pinch sea salt",
+    "Pinch cayenne"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Add rinsed and drained nuts or seeds to a food processor. Pulse until well chopped."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Add remaining ingredients and process until well combined. Add a splash of water if mixture is too dry."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Transfer mixture to a bowl. Chill for 5–10 minutes, then roll into balls or press into a container and cut into squares. Garnish with shredded coconut or goji berries."
+    }
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "1 truffle",
+    "calories": "120 calories (approx)"
+  }
+}
+</script>

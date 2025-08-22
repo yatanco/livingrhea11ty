@@ -1,85 +1,172 @@
 ---
 title: "RAWkin’ Vegan Tacos"
+description: "A raw vegan taco recipe made with walnut 'meat,' cashew cream, sassy salsa, and fresh veggies wrapped in crisp romaine or collard leaves. Crunchy, satiating, and full of flavor."
 date: 2016-09-11
 categories: 
-  - "recipes"
+  - recipes
 tags: 
-  - "clean-living"
-  - "healthy-recipes"
-  - "real-food"
-coverImage: "tacos.jpg"
+  - clean-living
+  - healthy-recipes
+  - real-food
+cover: "/pages/images/tacos.jpg"
 ---
 
-**Description**
+![Rawkin Vegan Tacos](/pages/images/tacos.jpg)
 
-My raw vegan tacos are mouth-watering! They’re crunchy, satiating, delicious, and they’ll leave you feeling high, in the most natural of ways. Housed in a light and bright green leaf, my tacos can be eaten in two’s or three’s, giving you the chance to re-live the delicious experience over again. Trust me, you’ll be happy you reached for seconds!
+## Description
 
-Ingredients
+These **raw vegan tacos** are crunchy, satiating, and delicious — leaving you energized and light.  
+Served in fresh romaine or collard leaves, they’re easy to eat in twos or threes, so you can savor the experience again and again.  
 
-**Neat Nut Meat**
+---
 
-1 cup of walnuts, pre-soaked overnight 1 tbsp cumin powder 1 tbsp wheat-free tamari or coconut aminos ½ tbsp apple cider vinegar 1 tsp extra virgin olive oil 1 garlic clove, pre-chopped for 5 minutes ⅛ tsp hot pepper (add more as needed)
+## Ingredients
 
-**Cashew Cream Twist**
+### Neat Nut Meat  
+- 1 cup walnuts (pre-soaked overnight)  
+- 1 tbsp cumin powder  
+- 1 tbsp wheat-free tamari or coconut aminos  
+- 1/2 tbsp apple cider vinegar  
+- 1 tsp extra virgin olive oil  
+- 1 garlic clove (pre-chopped 5 min)  
+- 1/8 tsp hot pepper (or to taste)  
 
-½ cup cashews 1 tbsp lemon juice or apple cider vinegar ¼ cup sun dried tomatoes, pre-soaked for 10 minutes pinch green stevia, or 1 tsp unrefined sweetener of choice ⅛ cup water (start with less, adding more as desired)
+### Cashew Cream Twist  
+- 1/2 cup cashews  
+- 1 tbsp lemon juice or apple cider vinegar  
+- 1/4 cup sun-dried tomatoes (pre-soaked 10 min)  
+- Pinch of green stevia or 1 tsp unrefined sweetener  
+- 1/8 cup water (adjust as needed)  
 
-**Sassy Salsa**
+### Sassy Salsa  
+- 1 cup tomatoes, chopped  
+- 1/4 cup cilantro  
+- 1–2 garlic cloves (pre-chopped 5 min)  
+- 1 tbsp lemon or lime juice (or apple cider vinegar)  
+- Pinch of green stevia or 1 tsp unrefined sweetener  
+- 1 tbsp chia seeds  
+- 1 tbsp extra virgin olive oil  
+- 1/8 tsp hot pepper (adjust to taste)  
+- Sea salt and black pepper to taste  
 
-1 cup tomatoes, chopped ¼ cup cilantro 1-2 cloves garlic, pre-chopped for 5 minutes 1 tbsp lemon or lime, freshly squeezed or 1 tbsp apple cider vinegar pinch green stevia, or 1 tsp unrefined sweetener of choice 1 tbsp chia seeds 1 tbsp extra virgin olive oil ⅛ tsp hot pepper (add more as needed) sea salt and black pepper to taste
+### Vegetable Fillers & Shell  
+- 5–7 large romaine or collard leaves  
+- Sliced avocado  
+- Grated carrots  
+- Sprouts  
+- Julienned red pepper  
+- Finely chopped green onions  
 
-**Vegetable Fillers & Shell**
+---
 
-5-7 large romaine or collard leaves sliced avocado grated carrots sprouts julienned red pepper finely chopped green onions
+## Instructions
 
-**Instructions**
+### Step 1  
+Place taco shells (romaine/collard leaves) in an ice bath to keep them crisp.  
 
-**Step 1**
+### Step 2  
+Prepare **Walnut Neat Meat**: rinse walnuts, then pulse all ingredients in a food processor until finely chopped. Avoid overprocessing. Set aside.  
 
-[](https://web.archive.org/web/20160822091559/https://www.livingrhea.com/wp-content/gallery/rawkin-vegan-tacos/rawkin_vegan_tacos_s3.jpg)
+### Step 3  
+Prepare **Sassy Salsa**: process all ingredients until combined. Set aside.  
 
-Add taco shells to an ice bath of cold water and ice cubes to keep the leaves submerged.
+### Step 4  
+Prepare **Cashew Cream Twist**: blend water first, then all remaining ingredients until smooth.  
 
-**Step 2**
+### Step 5  
+Prep veggies. Remove taco shells from ice bath and pat dry.  
 
-For the Walnut Neat Meat, rinse walnuts thoroughly and place in food processor, followed by all other ingredients, and process or pulse for 1 minute, or until the walnuts are finely chopped and mixture is combined, scraping down the sides often. Be mindful not to overprocess the walnuts, so their natural oils don’t seep out and turn your mixture into nut butter! Remove mixture and set aside.
+### Step 6  
+Assemble tacos: fill shells with walnut mixture, salsa, cream, and veggies. Enjoy — but be ready for a little mess!  
 
-**Step 3**
+---
 
-Add all Sassy Salsa ingredients to your food processor and process for 15-30 seconds until well combined, scraping down the sides in between. Remove salsa and set aside.
+## Tips and Techniques
 
-**Step 4**
+- Substitute walnuts with almonds or sunflower seeds (pre-soaked).  
+- Store soaked nuts in the fridge up to 4 days; blend with water and sweetener for nut milk.  
+- Always pre-chop garlic and let rest for optimal health compounds.  
+- Add water first when blending nuts to prevent sticking.  
+- For crisp taco shells, soak romaine/collard leaves in ice water 10–15 min before serving.  
 
-For Cashew Cream Twist, add water to your high-speed blender, followed by the remainder of ingredients. Blend on low, until mixture is smooth and creamy.
+---
 
-**Step 5**
+## Why I Love My Recipe
 
-Prepare veggie fillings and remove taco shells from ice bath, patting them down with a paper towel to dry.
+I could eat these tacos daily. Unlike traditional tacos that leave me bloated, these raw vegan tacos are energizing, flavorful, and digest light. The four components can be prepped in advance, making this a perfect recipe for batch cooking.  
 
-**Step 6**
+---
 
-[](https://web.archive.org/web/20160822091559/https://www.livingrhea.com/wp-content/gallery/rawkin-vegan-tacos/rawkin_vegan_tacos_s4.jpg)
+## Benefits
 
-Add all fillings to taco shell, and top with sauces. Hold the base and tip of the shell for easy eating, but prepare to get your hands a bit dirty! Chew slowly and mindfully, knowing you are taking in so many different sauces and ingredients, and enjoy the experience!
+- **Nuts & seeds** → nutrient-dense, packed with healthy fats & protein  
+- **Vegetables** → deliver a wide spectrum of vitamins & minerals  
+- **Chia seeds** → rich in fiber for gut health  
+- **Garlic** → supports cardiovascular, anti-inflammatory, and antioxidant functions  
 
-**Tips and Techniques**
+---
 
-- Almonds and sunflower seeds work well as walnut substitutes, both pre-soaked and well rinsed for 6-8 hours (or overnight)
-- You can store unused soaked nuts in the fridge for up to 4 days, and if you’re looking for another use, throw them in the blender, add water, a touch of sweetener, and blend to milky perfection!
-- Pre-chopping garlic and allowing them to sit for 5-10 minutes before use will enable the formation of healthy sulfur-containing compounds.
-- For my Cashew Cream Twist recipe, adding water to your blender first, followed by ingredients, will prevent the nuts from sticking to the bottom of the blender.
-- Stirring chia seeds into the finished salsa will thicken in, as well as add macronutrients to the recipe.
-- To ensure a crispy taco experience, submerge romaine and collard leaves in ice cold water for 10-15 minutes (or longer), then pat them dry with a paper towel
-- Discard the bottom half of the collard stem before using.
-- This recipe tastes amazing and is balanced with the walnut filling alone. Consider the additional recipes complementary, but not necessary.
-
-**Why I Love My Recipe**
-
-I love my recipe so much I could eat it for lunch or dinner daily for multiple days in a row (I’ve actually done this!). I love the real deal tacos, but they don’t love me. I often end my experience with a bloated belly and a cloudy mind. This recipe offers a similar if not better taste than the tacos I grew up eating, but also leaves me feeling wonderful. The 4-part recipe is relatively easy to put together, and the dishes keep well when refrigerated for a good few days. All the more reason to make extras!
-
-**Benefits**
-
-- Nuts and seeds are packed with health-promoting fat, nutrients and protein
-- Vegetables deliver a diverse selection of both vitamins and minerals to the body
-- Chia seeds are rich in both soluble and insoluble fiber, meaning they feed the microflora in your gut, as well as add bulk to your stool
-- Garlic, when pre-chopped, gives rise to sulfur-containing compounds which are associated with prevention of heart disease, inflammatory disease, cancer and the generation of antioxidants
+<!-- Recipe Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "RAWkin’ Vegan Tacos",
+  "image": "https://www.livingrhea.com/pages/images/tacos.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Rhea Mehta"
+  },
+  "datePublished": "2016-09-11",
+  "description": "A raw vegan taco recipe made with walnut 'meat,' cashew cream, salsa, and veggies wrapped in crisp romaine or collard leaves. Crunchy, satiating, and nourishing.",
+  "recipeCategory": "Main Course",
+  "recipeCuisine": "Vegan",
+  "keywords": "raw vegan tacos, walnut meat, cashew cream tacos, healthy tacos",
+  "recipeYield": "5–7 tacos",
+  "prepTime": "PT25M",
+  "cookTime": "PT0M",
+  "totalTime": "PT25M",
+  "recipeIngredient": [
+    "1 cup walnuts (pre-soaked overnight)",
+    "1 tbsp cumin powder",
+    "1 tbsp wheat-free tamari or coconut aminos",
+    "1/2 tbsp apple cider vinegar",
+    "1 tsp extra virgin olive oil",
+    "1 garlic clove (pre-chopped 5 min)",
+    "1/8 tsp hot pepper",
+    "1/2 cup cashews",
+    "1 tbsp lemon juice or apple cider vinegar",
+    "1/4 cup sun-dried tomatoes (pre-soaked 10 min)",
+    "Pinch green stevia or 1 tsp unrefined sweetener",
+    "1/8 cup water",
+    "1 cup tomatoes, chopped",
+    "1/4 cup cilantro",
+    "1–2 garlic cloves (pre-chopped 5 min)",
+    "1 tbsp lemon or lime juice (or apple cider vinegar)",
+    "Pinch green stevia or 1 tsp unrefined sweetener",
+    "1 tbsp chia seeds",
+    "1 tbsp extra virgin olive oil",
+    "1/8 tsp hot pepper",
+    "Sea salt and black pepper",
+    "5–7 large romaine or collard leaves",
+    "Sliced avocado",
+    "Grated carrots",
+    "Sprouts",
+    "Julienned red pepper",
+    "Finely chopped green onions"
+  ],
+  "recipeInstructions": [
+    {"@type": "HowToStep","text": "Soak taco shells (romaine/collard leaves) in ice water to crisp."},
+    {"@type": "HowToStep","text": "Pulse soaked walnuts with spices to make walnut meat."},
+    {"@type": "HowToStep","text": "Process salsa ingredients and set aside."},
+    {"@type": "HowToStep","text": "Blend cashew cream ingredients until smooth."},
+    {"@type": "HowToStep","text": "Prep veggies and pat taco shells dry."},
+    {"@type": "HowToStep","text": "Assemble tacos with fillings, sauces, and veggies."}
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "1 taco",
+    "calories": "150-200 (approx)"
+  }
+}
+</script>

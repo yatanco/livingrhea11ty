@@ -14,7 +14,7 @@ tags:
 coverImage: "shopping-list.jpeg"
 ---
 
- 
+ ![Wellness Shopping List](/pages/images/shopping-list.jpeg)
 
 Hi Community,
 

@@ -107,9 +107,8 @@ I’m proud to be an affiliate of Vancouver-based company **Qi Traditions** beca
 
 👉 [Check out their resources and products here](https://qitraditions.com/?ref=6qd23azmupo_livingrhea) (you’ll get 10% off, and full disclosure: I get a small commission).  
 
-[![Qi Traditions medicinal mushroom products](/pages/images/1602029258290.png)](https://qitraditions.com/?ref=6qd23azmupo_livingrhea)
 
-I only affiliate myself with the best — right now that’s **Qi Traditions** and the stress-reducing wearable-tech company [Apollo Neuro](/product-reviews/apollo-clinically-validated-wearable-device/).
+I only affiliate myself with the best — right now that’s **Qi Traditions** and the stress-reducing wearable-tech company [Apollo Neuro](/blog/apollo-clinically-validated-wearable-device/).
 
 If you’re not sure which mushrooms are best for you, you can fill out a quick quiz on the Qi Traditions website to receive a personalized recommendation.  
 

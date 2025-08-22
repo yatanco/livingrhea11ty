@@ -9,7 +9,7 @@ tags:
   - "hemp-oil"
   - "product-reviews"
 coverImage: "hempoil-e1485351280411.jpg"
-draft: true
+draft: false
 ---
 
 **The perks:**
