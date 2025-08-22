@@ -7,7 +7,7 @@ eleventyNavigation:
       order: 3
 ---
 
- ABOUT 
+# ABOUT 
 
 ## MY BIO
 

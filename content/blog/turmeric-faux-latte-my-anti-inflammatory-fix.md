@@ -11,6 +11,8 @@ tags:
   - "smoothies-2"
 coverImage: "tumeric2-e1484831409414.jpg"
 ---
+![Turmeric Faux Latte](/pages/images/tumeric2-e1484831409414.jpg)
+
 
 **Description:**
 

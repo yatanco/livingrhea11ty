@@ -9,10 +9,11 @@ tags:
   - "greensmoothies"
   - "rawfood"
   - "selfcare"
-coverImage: "Green_Warrior_Smoothie-FI.jpg"
+coverImage: "/pages/images/green-warrior-smoothies-1.jpg"
 ---
+![Green Warrior](/pages/images/green-warrior-smoothies-1.jpg)
 
-[Green smoothies](https://www.livingrhea.com/recipes/green-warrior-smoothie/) are all the heat - or un-heat, for that matter. One of the chief reasons you’d want to swap your dead, sugar-laden, complex breakfast with a “pre-chewed” fibrous, living greens smoothie is to get your daily dose of bioavailable nutrition whilst preserving your precious digestive fire. In this way, your body can focus its energy on other important tasks, like cellular repair, detoxification, and the metabolism of that not-so-healthy late-night snack. Oh yeah, and on productivity at work :)
+[Green smoothies](/blog/green-warrior-smoothie) are all the heat - or un-heat, for that matter. One of the chief reasons you’d want to swap your dead, sugar-laden, complex breakfast with a “pre-chewed” fibrous, living greens smoothie is to get your daily dose of bioavailable nutrition whilst preserving your precious digestive fire. In this way, your body can focus its energy on other important tasks, like cellular repair, detoxification, and the metabolism of that not-so-healthy late-night snack. Oh yeah, and on productivity at work :)
 
 Unlike popular belief, it’s not necessary to start your engine in full force from the moment you wake up. Have your lemon water, take your vitamins, breathe, and get blending.
 

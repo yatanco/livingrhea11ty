@@ -48,5 +48,19 @@
   ],
   "frontMatter.framework.id": "11ty",
   "frontMatter.preview.host": "http://localhost:8080",
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.content.pageFolders": [
+    {
+      "path": "[[workspace]]/content",
+      "title": "content"
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/content/blog"
+    },
+    {
+      "title": "pages",
+      "path": "[[workspace]]/content/pages"
+    }
+  ]
 }

@@ -12,6 +12,8 @@ tags:
   - "relationships"
 coverImage: "2-PRACTICES-THAT-WILL-CHANGE-YOUR-RELATIONSHIP-WITH-FOOD.jpg"
 ---
+![Diet Myths](/pages/images/2-PRACTICES-THAT-WILL-CHANGE-YOUR-RELATIONSHIP-WITH-FOOD-1024x576.jpg)
+
 
 **Did you know your relationship with food influences how you show up in your life?**
 

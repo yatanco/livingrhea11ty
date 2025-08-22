@@ -3,13 +3,6 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/_drafts/blog-old/</loc>
-			<lastmod>2013-11-28</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/pages/contact/</loc>
 			<lastmod>2013-11-28</lastmod>
 		</url>
@@ -598,34 +591,6 @@
 	
 		
 		<url>
-			<loc>https://example.com/blog/firstpost/</loc>
-			<lastmod>2018-05-01</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/secondpost/</loc>
-			<lastmod>2018-07-04</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/thirdpost/</loc>
-			<lastmod>2018-08-24</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/blog/fourthpost/</loc>
-			<lastmod>2018-09-30</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/blog/green-warrior-smoothie/</loc>
 			<lastmod>2019-12-01</lastmod>
 		</url>
@@ -829,13 +794,6 @@
 	
 		
 		<url>
-			<loc>https://example.com/pages/thank-you-for-connenting-us/</loc>
-			<lastmod>2020-12-14</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/pages/thanks/</loc>
 			<lastmod>2020-12-15</lastmod>
 		</url>
@@ -871,13 +829,6 @@
 	
 		
 		<url>
-			<loc>https://example.com/blog/fifthpost/</loc>
-			<lastmod>2023-01-23</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/pages/test/</loc>
 			<lastmod>2023-08-01</lastmod>
 		</url>
@@ -893,13 +844,6 @@
 		
 		<url>
 			<loc>https://example.com/pages/home-duplicate-5686/</loc>
-			<lastmod>2023-08-03</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://example.com/pages/test-2/</loc>
 			<lastmod>2023-08-03</lastmod>
 		</url>
 	
@@ -1025,13 +969,6 @@
 	
 		
 		<url>
-			<loc>https://example.com/blog/_drafts/lose-fat/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/blog/_drafts/meat-longevity-whats-connection/</loc>
 			<lastmod>2025-08-21</lastmod>
 		</url>
@@ -1053,15 +990,8 @@
 	
 		
 		<url>
-			<loc>https://example.com/blog/_drafts/make-sense-body-acidity/</loc>
-			<lastmod>2025-08-21</lastmod>
-		</url>
-	
-	
-		
-		<url>
 			<loc>https://example.com/feed/feed.xml</loc>
-			<lastmod>2025-08-21</lastmod>
+			<lastmod>2025-08-22</lastmod>
 		</url>
 	
 </urlset>

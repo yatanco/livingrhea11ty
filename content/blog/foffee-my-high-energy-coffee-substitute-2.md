@@ -11,6 +11,7 @@ tags:
   - "smoothies-2"
 coverImage: "chai.jpg"
 ---
+![Foffee Alternative](/pages/images/chai.jpg)
 
 **Description**
 

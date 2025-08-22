@@ -6,6 +6,7 @@ categories:
   - "scientific-wellness"
 coverImage: "diet-e1485345264670.jpeg"
 ---
+![Diet Myths](/pages/images/diet-e1485345264670-300x200.jpeg)
 
  
 
