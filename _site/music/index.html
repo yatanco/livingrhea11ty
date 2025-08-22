@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Music</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZF0N80ES4X"></script>
+
+
+
+
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/music/" aria-current="page">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/coaching/">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<!-- Hero Image -->
+<section class="hero">
+  <picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhome-banner-music.png&width=1781&format=avif&via=transform 1781w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhome-banner-music.png&width=1781&format=webp&via=transform 1781w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fhome-banner-music.png&width=1781&format=png&via=transform" alt="Welcome banner" style="width:100%; height:auto;" width="1781" height="1059"></picture>
+</section>
+<h1 id="rhea-s-love-for-indian-classical-music-and-mantra-ritual">Rhea’s Love for Indian Classical Music and Mantra Ritual</h1>
+<h3></h3>
+<p>Rhea’s love for Indian classical music and mantra ritual are deeply rooted in her ancestry, upbringing, and yogic journey. After several years of classical vocal training with teachers including expert vocal coach and nationally broadcasted artist Stella Walker of Toronto, Canada, Rhea felt a strong desire to melodically carry the millennia old spiritual wisdom of her lineage into our collective hands.</p>
+<p>Embedded with healing messages of liberation, unity, and peace, Rhea, in collaboration with award-winning producer and composer John Capek of Nashville, TN has infused ancient Indian mantras with western contemporary rhythm to bring forth a harmonious east meets west dynamic. Rhea’s hope is to enable those around the world to access and benefit from the magical</p>
+<h2 id="soul-ceremony-is-now-available-worldwide-on-all-major-music-streaming-platforms">Soul Ceremony is now available worldwide on all major music streaming platforms.</h2>
+<p><a href="https://linktr.ee/rheamehta">Listen Now</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1kz2XmpD3NM" title="Dr. Rhea Mehta" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="about-soul-ceremony"><strong>ABOUT SOUL CEREMONY:</strong></h2>
+<p>One of the most transformative aspects of yoga is missing in the West, and that is the ancient practice of rhythmically and repetitively chanting mantras, which helps us let go of our stressors and feel love in our hearts with relative ease. At this time of collective stress and struggle, we need practices that can help us drop in more easily and wash our worries away. My music is designed to do this.</p>
+<p>Mantras are Sanskrit words, phrases, or sounds that originate in one of the oldest spiritual bodies of wisdom, known as the Vedas, which are at least 4000 years old. The word mantra means “to free from the mind.” Beyond the spiritual significance of each mantra lies the vibrational and resonant quality, which is ultimately responsible for evoking harmony within us. The outcome is a deep feeling of wholeness and oneness, of expansion and liberation, and of peace and unity. This inner discovery is the foundation of Soul Ceremony.</p>
+<p>The five mantras in my debut EP were very carefully selected, based on their impact on my own spiritual practice and journey, and on their potency and meaning as described in the Vedas. I spent significant time meditating with each one, and believe that these reworkings that I’ve birthed into ex</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dANZUcBKC_I" title="Dr. Rhea Mehta" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="about-rhea-s-first-single">ABOUT RHEA’S FIRST SINGLE:</h2>
+<h2 id="bright-light-gayatri-mantra-mix">BRIGHT LIGHT (GAYATRI MANTRA MIX)</h2>
+<p>The Gayatri mantra is considered one of the most important and powerful Vedic mantras. It was first recorded in the ancient Vedic text of the Rig Veda in Sanskrit around 2500-3000 years ago. Historically it has been recited by everyday people of India in their homes, as the sun rises or sets for purposes of purification and divine guidance.</p>
+<p>I have a deep connection to this mantra, as it is one I recited before bed with my parents every single night until I left for University at the age of 17. Since then, I have been using it sporadically to heal my ruminating mind. I consciously reconnected with it at a yoga sound ceremony training in Guatemala in early 2019. There it was melodically shared with us, but through a western lens with poor pronunciation, which I did not resonate with. I felt it lost connection to the essence of the mantra.</p>
+<p>After studying ancient meditation, tantra, and kriya yoga in the himalayan foothills of Rishikesh late 2019, I was (re)-initiated into the mantra tradition, and we were asked to recite the Gayatri mantra 6x at the end of our daily morning meditation practice. Since then it’s been playing in the background of my own movie.</p>
+<p><strong>Mantra in Sansrkit:</strong></p>
+<p><em>oṃ bhūr bhuvaḥ svaḥ</em><br>
+<em>tat savitur vareṇyaṃ</em><br>
+<em>bhargo devasya dhīmahi</em><br>
+<em>dhiyo yo naḥ pracodayāt</em></p>
+<p>One of many translations: <em>We meditate on the Spiritual Splendor of that supreme and Divine reality, source of the physical, astral and celestial spheres of existence. Allow that divine being supreme to illuminate our intellect, so that we can realize the supreme Truth.</em></p>
+<p>I interpret the mantra as a bowing down to the sun, which represents the entirety of existence as we know it and the embodiment of knowledge and light. When we chant this mantra, we awaken to the presence of the sun’s knowledge and light within ourselves, which can cleanse, enlighten, and guide us.</p>
+<p><strong>Meaning of Individual Words:</strong></p>
+<p>ॐ – OM – The Primitive Sound</p>
+<p>भूर् – BHUR – the physical world</p>
+<p>भुवः – BHUVA – the mental world</p>
+<p>स्वः – SVAHA – the celestial, the spiritual world</p>
+<p>तत् – TAT – That, God; Transcendental Paramatma</p>
+<p>सवितुर – SAVITUR – the Sun, the Creator, Preserver</p>
+<p>वरेण्यं – VARENYAM – more adorable, lovely</p>
+<p>भर्गो – BHARGO – shine, effulgence</p>
+<p>देवस्य – DEVASYA – resplendent, supreme Lord</p>
+<p>धीमहि – DEEMAHI – we meditate on</p>
+<p>धियो यो – DHI YO – intelligence, understanding, Intellect</p>
+<p>नः – NAH – Nah: our</p>
+<p>प्रचोदयात् – PRACHODAYAT – enlighten, guide, inspire</p>
+<p><strong>More translations of the Gayatri mantra:</strong></p>
+<p>“We meditate on the glory of that Being who has produced this universe; may She enlighten our minds.”</p>
+<p><strong>– Swami Vivekananda</strong></p>
+<p>“We meditate on the adorable glory of the radiant sun; may She inspire our intelligence.”</p>
+<p><strong>– S. Radhakrishnan</strong></p>
+<p>“We choose the Supreme Light of the divine Sun; we aspire that it may impel our minds.”</p>
+<p><strong>– Sri Aurobindo</strong></p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/music/` was built on 2025-08-21T21:12:08.470Z -->
+		<script type="module" src="/dist/v-qzhMLyZ-.js"></script>
+	</body>
+</html>

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Coaching</title>
+		<meta name="description" content="Rhea has the drive of an entrepreneur, the mind of a scientist and the heart of a healer. She has a focused vision and an impressive speed of execution. This is due in part to her unwavering commitment, her natural ability as a community builder and leader, and the rigour she brings to the products, ideas, and services she creates. She makes an excellent collaborator and we are just witnessing the start of her success. Big things to come.">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Living Rhea">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZF0N80ES4X"></script>
+
+
+
+
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Living Rhea</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				<li class="nav-item">
+				<a href="/">
+					Home
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/music/">
+					Music
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/about/">
+					About
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/coaching/" aria-current="page">
+					Coaching
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/testimonials-living-rhea/">
+					Testimonials
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/blog/">
+					Blog
+				</a>
+				</li>
+				<li class="nav-item">
+				<a href="/pages/contact/">
+					Contact
+				</a>
+				</li>
+				</ul>
+
+				</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h2 id="coaching">COACHING</h2>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcoaching-rhea.jpg&width=1200&format=avif&via=transform 1200w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcoaching-rhea.jpg&width=1200&format=webp&via=transform 1200w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fpages%2Fimages%2Fcoaching-rhea.jpg&width=1200&format=jpeg&via=transform" alt="" width="1200" height="800"></picture></p>
+<p>“The program that Rhea has put together is life transforming! Rhea herself has a wealth of information and great hacks that I was able to tap into and still continue to do so. We usually wait for tragedy to strike to make changes in our lives. Why wait! With this program I gained the awareness I was looking for with my body and mind connection. We often neglect the most important relationship we are having, and that's with ourselves! Thank you for reminding me of this, Rhea!”</p>
+<p><em><strong>Personal development for a lifetime of healthy and rewarding habits.</strong></em></p>
+<p>As human beings we are designed to self-heal. However, over the years we both knowingly and unknowingly introduce fat-soluble toxicants in the form of pollutants, heavy metals, pesticides, processed foods, and solvents to our bodies. When our load rises above our ability to cleanse the system naturally, toxicants get stored, instead of released. The consequences of environmental toxicity, paired with poor nutrition from our diet and from the soil that grows our food, is a recipe for several of the chronic symptoms we experience today, such as brain fog, headaches, low energy, poor digestion, constipation, and body pain. If we don’t correct this, the build up can eventually disrupt our internal environment, leading to disease.</p>
+<p>The good news is there’s a lot we can do right now.</p>
+<p>What’s important to remember is that we are all different and therefore our needs will be different from our neighbour’s. My job as a Bio-Toxicologist, <a href="https://web.archive.org/web/20220128132323/https://www.livingrhea.com/scientific-wellness/integrative-health-coaches-role/">Integrative Nutritionist</a> and Optimal Living Coach is to work with you to optimize your diet and habits to help you be the best version of you. We’ll talk a lot initially so I can understand your situation thoroughly. If you need to get certain tests or blood work done for additional clarity, I’ll make those suggestions. We’ll then put together a plan of action and set up achievable milestones.</p>
+<p>Me, I’ll act as your accountability partner and your go-to for education and guidance. That means we’re in touch every step of the way. You’ll get a shopping list, recipes, meal plan and nutraceutical recommendations, and together, we’ll track your progress and tweak your plan as needed until you feel happy with your health and until your daily self-care practices have turned into subconscious habits.</p>
+<p><strong>For all inquiries and bookings, please email dr.rhea@livingrhea.com. From there I’ll invite you to book a free consult to discuss.</strong></p>
+<p><strong>You:</strong></p>
+<ul>
+<li>Want to wake up feeling energized, light, and full of joy</li>
+<li>Are keen to create shifts in your life to support you in healing and happiness</li>
+<li>Feel ready to elevate and step into your power</li>
+<li>Wish to end each day feeling grateful, content, and healthy</li>
+<li>Seek to live this life knowing you’ve made a difference</li>
+<li>Are self-aware, curious, ambitious and motivated</li>
+<li>Love to learn and hack life</li>
+</ul>
+<p><strong>As your coach, I’ll work with you to:</strong></p>
+<ul>
+<li>Define and prioritize your wellness intentions and goals</li>
+<li>Identify and map immediate and long-term wellness optimizations</li>
+<li>Understand your body’s wants and needs</li>
+<li>Develop and sustain a positive mindset</li>
+<li>Modify your diet and routine with new recipes and self-care practices</li>
+<li>Overcome and turnaround health and life challenges and barriers</li>
+<li>Quantify and qualify your daily living through food journaling and emotion tracking</li>
+<li>Upgrade your knowledge of micronutrients, macronutrients and detoxification</li>
+<li>Get back in touch with who you are, at your authentic core</li>
+</ul>
+<h2 id="packages">PACKAGES</h2>
+<p>CLEAN SWEEP - 3 MONTHS</p>
+<p>A 3-month comprehensive program to help you clean sweep your health and lifestyle. This program consists of one-hour coaching sessions every 2 weeks via skype or in person for a total of 6 sessions. This program includes an assessment of your Health History and Metabolic Typing, followed by your Clean Sweep Action Plan, which includes:</p>
+<ul>
+<li>Education on mind-body optimization</li>
+<li>Identification of toxic triggers and removal/release</li>
+<li>Clean Sweep Shopping List</li>
+<li>Clean Sweep Meal Plan with customized recipes, supplements and self-care accessories, where appropriate</li>
+<li>Changemaker Tracker to pinpoint symptomatic patterns and monitor your daily progress</li>
+<li>Summary, notes and recommendations after each session</li>
+<li>Unlimited email support</li>
+</ul>
+<p>Details:</p>
+<p>In this program, I will work with you to raise your health and lifestyle to a level that’s aligned with your greater purpose. I’ll help you understand your specific nutritional needs, and I’ll guide you on how to deliver optimal value to your mind and body, while recognizing and overcoming habits that aren’t serving you. My signature program will enable you to move forward in life, feeling cleaner, lighter, happier, more motivated, energized, and purpose-driven.</p>
+<p>As we go deeper into our sessions, we’ll go deeper into your life. We’ll talk work, relationships, creativity, purpose, physical health and happiness, and we’ll draw connections to your health and healing. At the end of our program, we will re-assess your goals and health status and decide whether to continue to work together on a bimonthly basis. We may also switch to a maintenance program, whereby we connect only once a month. This is decided on a client-by-client basis, depending on your needs.</p>
+<p>MAINTENANCE - 1X/MONTH</p>
+<p>1 one-hour coaching session per month. This program is offered to existing clients who would like to continue beyond the  Clean Sweep or Cleanse to Clarity Programs with additional coaching on a flexible schedule.</p>
+<h2 id="coaching-framework">COACHING FRAMEWORK</h2>
+<p>I’ve broken down the path to optimal living into four steps, and my goal is to guide you in each of these areas to support you on this transformative journey.</p>
+<p><img src="content/images/RHEA_30.jpg" alt=""></p>
+<h5 id="dream">Dream</h5>
+<p>Paint a multi-sensory picture of your seraphic self</p>
+<p><img src="content/images/RHEA_29-1.jpg" alt=""></p>
+<h5 id="design">Design</h5>
+<p>Optimize your schedule to honour your daily intentions and goals</p>
+<p><img src="content/images/RHEA_37-1.jpg" alt=""></p>
+<h5 id="clean">Clean</h5>
+<p>Identify and discard triggers from your body and lifestyle</p>
+<p><img src="content/images/RHEA_12.jpg" alt=""></p>
+<h5 id="fuel">Fuel</h5>
+<p>Resolve inefficiencies in body and mind through functional nutrition and supplementation</p>
+<p>“I am fascinated by Dr. Rhea's over the top knowledge as a fellow health professional. Dr. Rhea has improved my gut issues 10 fold. She helped me regain the confidence and control I needed to ensure self-care and mindful eating. Her steps have healed me, my cravings, and my eating habits immensely.” - Dr. Neeta Bhushan, Founder &amp; CEO of the Emotional Grit Institute and author of Emotional Grit.</p>
+<p>“Dr. Rhea brings to the arena of health a burning desire to truly help people. She is a shining star in the area of healthy and conscious living.” - Dr. Sachin Patel, Founder of Living Proof Institute</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+			</p>
+		</footer>
+
+		<!-- This page `/coaching/` was built on 2025-08-21T21:12:08.469Z -->
+		<script type="module" src="/dist/v-qzhMLyZ-.js"></script>
+	</body>
+</html>

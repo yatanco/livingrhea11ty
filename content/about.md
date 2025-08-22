@@ -2,13 +2,15 @@
 title: "About"
 date: 2014-07-15
 coverImage: "about-new-banner.jpg"
+eleventyNavigation:
+      key: About
+      order: 3
 ---
-
- ABOUT 
+# ABOUT RHEA
 
 ## MY BIO
 
-  ![](images/Rhea-Mehta-Bio.jpg)
+  ![](/pages/images/Rhea-Mehta-Bio.jpg)
 
 Dr. Rhea Mehta has over 10 years experience working as an innovative entrepreneur and advisor at the intersection of science, health technology, and wellness. She holds a PhD in Molecular Toxicology and Nutritional Biochemistry from the University of Toronto and a Bachelor's in Biomedical Sciences from the University of Waterloo with over 15 scientific publications.
 
