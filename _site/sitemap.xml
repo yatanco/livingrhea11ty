@@ -850,6 +850,7 @@
 	
 		
 		<url>
+<<<<<<< Updated upstream
 			<loc>https://livingrhea.com/blog/_drafts/id-1764/</loc>
 			<lastmod>2025-08-21</lastmod>
 		</url>
@@ -865,6 +866,9 @@
 		
 		<url>
 			<loc>https://livingrhea.com/blog/_drafts/unhealthy-cravings-learn-create-healthy-distractions/</loc>
+=======
+			<loc>https://example.com/blog/_drafts/id-1764/</loc>
+>>>>>>> Stashed changes
 			<lastmod>2025-08-21</lastmod>
 		</url>
 	
@@ -878,7 +882,25 @@
 	
 		
 		<url>
+<<<<<<< Updated upstream
 			<loc>https://livingrhea.com/feed/feed.xml</loc>
+=======
+			<loc>https://example.com/blog/_drafts/unhealthy-cravings-learn-create-healthy-distractions/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/blog/_drafts/id-1236/</loc>
+			<lastmod>2025-08-21</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://example.com/feed/feed.xml</loc>
+>>>>>>> Stashed changes
 			<lastmod>2025-08-22</lastmod>
 		</url>
 	
