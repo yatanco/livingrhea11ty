@@ -9,10 +9,8 @@ tags:
   - "gratitude"
   - "love"
   - "support"
-coverImage: "20140810-IMG_8399.jpg"
+coverImage: "/pages/images/gratitude.jpg"
 ---
-
-~~_With love and gratitude~~_
 
 A little over a year ago I had a really profound realization that took over my mind and body. For a long period, I froze in deep reflection about the way in which I was living my life.  As I traveled through the past, I realized I hadn't been grateful enough--- for my family, my friends, my relationships, my opportunities, my  gifts, my breath, my senses, my mind. **I had never expressed gratitude before in an open, honest, and loving way.**
 

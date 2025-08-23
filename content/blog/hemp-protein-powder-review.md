@@ -9,7 +9,7 @@ tags:
   - "hemp-protein"
   - "hemp-protein-powder"
   - "protein-powder"
-coverImage: "hempprotein-e1485348581739.jpg"
+coverImage: "/pages/images/hempprotein-e1485348581739.jpg"
 ---
 
 **The perks:**

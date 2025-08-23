@@ -10,7 +10,7 @@ tags:
   - "healthy-living"
   - "healthy-living-tips"
   - "secrets-of-healthy-living"
-coverImage: "Healthy-Living.jpg"
+coverImage: "/pages/images/Healthy-Living.jpg"
 ---
 
 _In the last article, we learned about how Dr. Rhea Mehta, [Molecular Toxicologist](https://www.livingrhea.com/inspiration/get-rid-of-home-of-toxins-with-dr-rhea-mehta-molecular-toxicologist/), integrative nutrition advisor, and leader in health advocacy, made changes to her life and started the [RAWjuvenation community](https://www.livingrhea.com/inspiration/rawjuvenation-community-making-the-change-dr-rhea-mehta/)._ This article will talk about _what changes everyone should make to their daily lives in order to attain healthy living._

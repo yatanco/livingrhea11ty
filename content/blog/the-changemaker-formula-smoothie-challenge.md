@@ -3,7 +3,7 @@ title: "The Changemaker Formula  - a transformative 30 day smoothie challenge"
 date: 2021-01-11
 categories: 
   - "scientific-wellness"
-coverImage: "change-maker-1.jpg"
+coverImage: "/pages/images/change-maker-1.jpg"
 ---
 
 _“The only constant in life is change”-Heraclitus._

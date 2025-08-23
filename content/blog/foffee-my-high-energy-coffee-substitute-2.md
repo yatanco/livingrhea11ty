@@ -9,9 +9,8 @@ tags:
   - "healthy-recipes"
   - "real-food"
   - "smoothies-2"
-coverImage: "chai.jpg"
+coverImage: "/pages/images/chai.jpg"
 ---
-![Foffee Alternative](/pages/images/chai.jpg)
 
 **Description**
 
