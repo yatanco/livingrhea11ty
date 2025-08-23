@@ -11,7 +11,6 @@ tags:
   - "selfcare"
 coverImage: "/pages/images/green-warrior-smoothies-1.jpg"
 ---
-![Green Warrior](/pages/images/green-warrior-smoothies-1.jpg)
 
 [Green smoothies](/blog/green-warrior-smoothie) are all the heat - or un-heat, for that matter. One of the chief reasons you’d want to swap your dead, sugar-laden, complex breakfast with a “pre-chewed” fibrous, living greens smoothie is to get your daily dose of bioavailable nutrition whilst preserving your precious digestive fire. In this way, your body can focus its energy on other important tasks, like cellular repair, detoxification, and the metabolism of that not-so-healthy late-night snack. Oh yeah, and on productivity at work :)
 

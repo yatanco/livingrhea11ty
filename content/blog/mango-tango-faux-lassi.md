@@ -10,10 +10,8 @@ tags:
   - healthy-recipes
   - real-food
   - smoothies
-cover: "/pages/images/mango-tango-faux-lassi.jpg"
+coverImage: "/pages/images/mango-tango-faux-lassi.jpg"
 ---
-
-![Mango Tango Faux Lassi](/pages/images/mango-tango-faux-lassi.jpg)
 
 ## Description
 

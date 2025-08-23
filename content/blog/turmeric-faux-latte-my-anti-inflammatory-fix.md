@@ -10,10 +10,11 @@ tags:
   - home-brew
   - real-food
   - smoothies
-cover: "/pages/images/tumeric2-e1484831409414.jpg"
+coverImage: "/pages/images/tumeric2-e1484831409414.jpg"
+layout: layouts/post.njk
+
 ---
 
-![Turmeric Faux Latte](/pages/images/tumeric2-e1484831409414.jpg)
 
 ## Description
 
